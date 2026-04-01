@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Duel - Quem é mais rápido?</title>
+    <link rel="stylesheet" href="style\style.css">
+</head>
+<body>
+
+    <div id="start-screen">
+   '    <div class="start-content">
+            <h1>Show do Andrezão</h1>
+            
+            <div class="controls-info">
+                <div class="info-box p1">
+                    <input type="text" id="name-p1" placeholder="Nome Jogador 1" maxlength="15">
+                    <div class="key-hint">Tecla <span>A</span></div>
+                </div>
+
+                <div class="info-box p2">
+                    <input type="text" id="name-p2" placeholder="Nome Jogador 2" maxlength="15">
+                    <div class="key-hint">Tecla <span>L</span></div>
+                </div>
+            </div>
+
+            <button id="btn-start" onclick="iniciarJogo()">START</button>
+        </div>'
+    </div>
+
+    <div class="game-wrapper">
+        <header class="scoreboard">
+            <div id="player1" class="player-box left">
+                <span class="player-name">JOGADOR 1 (Tecla A)</span>
+                <div class="score">000</div>
+            </div>
+
+            <div class="timer-box">
+                <div id="global-timer">30</div>
+            </div>
+
+            <div id="player2" class="player-box right">
+                <span class="player-name">JOGADOR 2 (Tecla L)</span>
+                <div class="score">000</div>
+            </div>
+        </header>
+
+        <main class="quiz-center">
+            <div class="question-card">
+                <div class="image-container">
+                    <img id="question-image" src="" alt="" style="display: none;">
+                </div>
+                
+                <div class="question-text">
+                    <h2 id="question-title">Aguardando início...</h2>
+                    <p id="responding-now" class="hidden"></p>
+                </div>
+
+                <div class="options-grid" id="options-container">
+                    <button class="option-btn" disabled>Alternativa 1</button>
+                    <button class="option-btn" disabled>Alternativa 2</button>
+                    <button class="option-btn" disabled>Alternativa 3</button>
+                    <button class="option-btn" disabled>Alternativa 4</button>
+                </div>
+            </div>
+        </main>
+
+        <div id="buzzer-overlay" class="hidden">
+            <h1 id="buzzer-msg">JOGADOR 1 BATEU!</h1>
+        </div>
+    </div>
+
+    <div id="correct-overlay" class="feedback-overlay hidden">
+        <div class="feedback-content">
+            <h1 class="correct-text">CORRETO</h1>
+        </div>
+    </div>
+
+    <div id="wrong-overlay" class="feedback-overlay hidden">
+        <div class="feedback-content">
+            <h1 class="wrong-text">ERRADO</h1>
+        </div>
+    </div>
+
+    <script src="script\perguntas.js"></script>
+    <script src="script\script.js"></script>
+</body>
+</html>

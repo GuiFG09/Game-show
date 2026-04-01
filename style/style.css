@@ -1,0 +1,504 @@
+@font-face {
+    font-family: 'VCR_OSD';
+    src: url('../fonts/VCR_OSD_MONO_1.001.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 1. CONFIGURAÇÕES GERAIS E CORES */
+
+button, 
+input, 
+select, 
+textarea, 
+.info-box span, 
+.key-hint {
+    font-family: 'VCR_OSD', var(--font-main), sans-serif;
+    text-transform: uppercase; /* Opcional: combina muito com essa fonte */
+}
+
+:root {
+    --bg-color: #0a0a0c;
+    --player1-color: #00d4ff; 
+    --player2-color: #ff0055; 
+    --accent-color: #ffffff; 
+    --font-main: 'VCR_OSD', 'Segoe UI', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-color);
+    color: white;
+    font-family: var(--font-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: var(--font-main);
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeSpeed;
+}
+
+/* 2. TELA INICIAL */
+#start-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #1a1a2e 0%, #0a0a0c 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+}
+
+.start-content {
+    text-align: center;
+    border: 2px solid var(--accent-color);
+    padding: 50px;
+    border-radius: 0; /* Alterado para quadrado */
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 30px var(--accent-color);
+}
+
+.start-content h1 {
+    font-size: 5rem;
+    margin: 0;
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--accent-color);
+}
+
+#btn-start {
+    margin-top: 20px;
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    background: var(--accent-color);
+    border: none;
+    border-radius: 0; /* Alterado para quadrado */
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#btn-start:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px var(--accent-color);
+}
+
+.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* 3. INTERFACE DO JOGO */
+.game-wrapper {
+    width: 90%;
+    max-width: 1200px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.player-box {
+    padding: 15px 30px;
+    border: 3px solid #333;
+    border-radius: 0; /* Alterado para quadrado */
+    text-align: center;
+    min-width: 150px;
+}
+
+.player-box, 
+.question-card, 
+.timer-box {
+    position: relative;
+}
+
+.player-box.left { 
+    border-color: var(--player1-color); 
+    box-shadow: 0 0 15px var(--player1-color);
+    border: 2px solid var(--player1-color);
+}
+
+.player-box.left::before {
+    content: '';
+    position: absolute;
+    /* Define o espaço entre as linhas. Ajuste os valores negativos conforme necessário */
+    top: -6px; 
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border: 2px solid var(--player1-color); /* Borda externa paralela */
+    pointer-events: none; /* Garante que não interfira nos cliques */
+}
+
+.player-box.right { 
+    border-color: var(--player2-color); 
+    box-shadow: 0 0 15px var(--player2-color);
+    border: 2px solid var(--player2-color);
+}
+
+.player-box.right::before {
+    content: '';
+    position: absolute;
+    top: -6px; 
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border: 2px solid var(--player2-color); /* Borda externa paralela */
+    pointer-events: none;
+}
+
+.score { font-size: 3rem; font-weight: bold; }
+
+.timer-box {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    padding: 10px 20px;
+    border-radius: 0; /* Alterado para quadrado */
+}
+
+/* 4. CARD DE PERGUNTAS E BOTÕES */
+.question-card {
+    background: #151518;
+    padding: 30px;
+    border-radius: 0; /* Quadrado conforme seu pedido anterior */
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ffffff;
+    position: relative; /* OBRIGATÓRIO */
+    overflow: visible !important; /* ISSO FAZ A BORDA APARECER */
+    z-index: 10;
+}
+
+.question-card::before,
+.timer-box::before {
+content: '';
+    position: absolute;
+    /* Tente valores menores se a borda ainda não aparecer */
+    top: -6px; 
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border: 2px solid #ffffff; /* Branco */
+    pointer-events: none;
+    z-index: 11; /* Deve ser maior que o do card */
+}
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.option-btn {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    border: 2px solid white;
+    border-radius: 0; /* Alterado para quadrado */
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: 0.2s;
+    text-align: left;
+    opacity: 0; 
+}
+
+/* O Losango com a Letra */
+.diamond-box {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transform: rotate(45deg); 
+    transition: 0.2s;
+    border-radius: 0; /* Garante que o losango interno seja pontiagudo */
+}
+
+.diamond-box span {
+    color: black;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transform: rotate(-45deg); 
+}
+
+/* Efeitos de Hover nos Botões */
+#options-container {
+    position: relative;
+    z-index: 120;
+    min-height: 100px;
+}
+
+.option-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.option-btn:hover .diamond-box {
+    background-color: black;
+}
+
+.option-btn:hover .diamond-box span {
+    color: white;
+}
+
+.option-btn:active {
+    transform: translateY(2px);
+}
+
+/* 5. LÓGICA DE BLOQUEIO E BUZZER */
+.options-grid.locked button {
+    pointer-events: none !important;
+    opacity: 0.3 !important;
+}
+
+.options-grid:not(.locked) button {
+    pointer-events: auto !important;
+    cursor: pointer;
+}
+
+#buzzer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    pointer-events: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#buzzer-msg {
+    text-transform: uppercase;
+    text-shadow: 0 0 20px white;
+    animation: pulse 0.5s infinite alternate;
+    position: absolute;
+    bottom: 10%; 
+    font-size: 3rem;
+    z-index: 60;
+}
+
+/* 6. ANIMAÇÕES */
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-element {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* 7. CONTROLES E INFO */
+.controls-info {
+    display: flex;
+    gap: 20px;
+    margin: 30px 0;
+    justify-content: center;
+}
+
+.info-box {
+    padding: 20px;
+    border-radius: 0; /* Alterado para quadrado */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.info-box input {
+    width: 90%;
+    padding: 8px;
+    border: none;
+    border-radius: 0; /* Alterado para quadrado */
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    outline: none;
+}
+
+.info-box input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.key-hint {
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+}
+
+.key-hint span {
+    background: white;
+    padding: 2px 8px;
+    border-radius: 0; /* Alterado para quadrado */
+    border: 1px solid #000;
+    margin-left: 5px;
+}
+
+#responding-now {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.text-p1 { color: var(--player1-color); }
+.text-p2 { color: var(--player2-color); }
+
+.info-box.p1 { background: var(--player1-color); }
+.info-box.p2 { background: var(--player2-color); }
+.info-box span { background: white; padding: 2px 8px; border-radius: 0; border: 1px solid black; }
+
+.feedback-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 500;
+    backdrop-filter: blur(8px);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.9) 100%);
+    pointer-events: none;
+}
+
+.feedback-content {
+    padding: 60px 100px;
+    border-radius: 0; /* Alterado para quadrado */
+    animation: feedbackEntry 0.5s ease-out forwards;
+}
+
+/* --- ESTILO ESPECÍFICO PARA CORRETO (VERDE) --- */
+#correct-overlay .feedback-content {
+    background: linear-gradient(135deg, rgba(0, 50, 0, 0.9) 0%, rgba(0, 0, 0, 0.95) 100%);
+    border: 3px solid #00ff00;
+    box-shadow: 0 0 50px rgba(0, 255, 0, 0.6);
+}
+
+.correct-text {
+    font-size: 6rem;
+    color: #ccff00;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-shadow: 0 0 20px rgba(0, 255, 0, 0.8), 0 0 5px white;
+    margin: 0;
+}
+
+.btn-correct {
+    background-color: #00ff00 !important;
+    border-color: #ccff00 !important;
+    color: black !important;
+    box-shadow: 0 0 20px #00ff00;
+}
+
+.btn-wrong-selected {
+    background-color: #ff0055 !important;
+    border-color: #ffffff !important;
+    color: white !important;
+    box-shadow: 0 0 20px #ff0055;
+}
+
+.btn-neutral {
+    opacity: 0.6;
+    border: 2px solid white !important;
+}
+
+/* --- ESTILO ESPECÍFICO PARA ERRADO (VERMELHO) --- */
+#wrong-overlay .feedback-content {
+    background: linear-gradient(135deg, rgba(50, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.95) 100%);
+    border: 3px solid #ff0055;
+    box-shadow: 0 0 50px rgba(255, 0, 85, 0.6);
+}
+
+.wrong-text {
+    font-size: 6rem;
+    color: #ffcccc;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-shadow: 0 0 20px rgba(255, 0, 85, 0.8), 0 0 5px white;
+    margin: 0;
+}
+
+/* Container para o botão de próxima */
+.next-btn-container {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 999;
+    display: flex;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+#btn-next-step {
+    padding: 15px 40px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 0; /* Alterado para quadrado */
+    font-weight: 900;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+#btn-next-step:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+}
+
+/* --- ANIMAÇÃO DE ENTRADA (ESTILO E-SPORTS) --- */
+@keyframes feedbackEntry {
+    0% { 
+        transform: scale(0.5) rotate(-10deg); 
+        opacity: 0; 
+    }
+    60% { 
+        transform: scale(1.1) rotate(5deg);
+    }
+    100% { 
+        transform: scale(1) rotate(0deg); 
+        opacity: 1; 
+    }
+}
