@@ -4,31 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Duel - Quem é mais rápido?</title>
-    <link rel="stylesheet" href="style\style.css">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
 
+    <div class="crt-overlay"></div>
+
     <div id="start-screen">
-   '    <div class="start-content">
-            <h1>Show do Andrezão</h1>
+        <div class="start-content">
+            <h1 class="game-title">
+                <span class="t-blue">Game</span> 
+                <span class="t-red">Show</span>
+            </h1>
             
             <div class="controls-info">
                 <div class="info-box p1">
-                    <input type="text" id="name-p1" placeholder="Nome Jogador 1" maxlength="15">
+                    <input type="text" id="name-p1" placeholder="Jogador 1" maxlength="20">
                     <div class="key-hint">Tecla <span>A</span></div>
                 </div>
 
                 <div class="info-box p2">
-                    <input type="text" id="name-p2" placeholder="Nome Jogador 2" maxlength="15">
+                    <input type="text" id="name-p2" placeholder="Jogador 2" maxlength="20">
                     <div class="key-hint">Tecla <span>L</span></div>
                 </div>
             </div>
 
             <button id="btn-start" onclick="iniciarJogo()">START</button>
-        </div>'
+        </div>
+
+        <div id="set-menu" class="set-menu">
+            <button id="toggle-menu" onclick="toggleMenu()">Perguntas</button>
+            <div id="menu-content" class="menu-content hidden">
+                <div id="set-buttons"></div>
+            </div>
+        </div>
     </div>
 
-    <div class="game-wrapper">
+    <div class="game-wrapper hidden">
         <header class="scoreboard">
             <div id="player1" class="player-box left">
                 <span class="player-name">JOGADOR 1 (Tecla A)</span>
@@ -36,7 +49,7 @@
             </div>
 
             <div class="timer-box">
-                <div id="global-timer">30</div>
+                <time id="global-timer">30</time>
             </div>
 
             <div id="player2" class="player-box right">
@@ -57,11 +70,7 @@
                 </div>
 
                 <div class="options-grid" id="options-container">
-                    <button class="option-btn" disabled>Alternativa 1</button>
-                    <button class="option-btn" disabled>Alternativa 2</button>
-                    <button class="option-btn" disabled>Alternativa 3</button>
-                    <button class="option-btn" disabled>Alternativa 4</button>
-                </div>
+                    </div>
             </div>
         </main>
 
@@ -82,7 +91,31 @@
         </div>
     </div>
 
-    <script src="script\perguntas.js"></script>
-    <script src="script\script.js"></script>
+    <div id="timeout-overlay" class="feedback-overlay hidden">
+        <div class="feedback-content" style="border-color: #ffaa00; box-shadow: 0 0 60px rgba(255, 170, 0, 0.6);">
+            <h2 class="wrong-text" style="color: #ffaa00; text-shadow: 0 0 30px rgba(255, 170, 0, 0.8);">TEMPO ESGOTADO</h2>
+        </div>
+    </div>
+
+    <div id="winner-overlay" class="feedback-overlay hidden">
+        <div class="winner-card">
+            <h1 class="winner-title">CAMPEÃO</h1>
+            <div id="winner-info">
+                <span id="winner-name">NOME DO JOGADOR</span>
+                <div id="winner-score">PONTOS: 000</div>
+            </div>
+            <button class="pergunta-btn" onclick="location.reload()">JOGAR NOVAMENTE</button>
+        </div>
+    </div>
+
+    <script src="script/perguntas.js"></script>
+    <script src="script/script.js"></script>
+
+    <audio id="menu-music" src="sounds/menu-theme.mp3" loop preload="auto"></audio>
+    <audio id="bg-music" src="sounds/bg-music.mp3" loop preload="auto"></audio>
+    <audio id="sound-correct" src="sounds/correct.mp3" preload="auto"></audio>
+    <audio id="sound-wrong" src="sounds/wrong.mp3" preload="auto"></audio>
+    <audio id="sound-victory" src="sounds/victory.mp3" preload="auto"></audio>
+
 </body>
 </html>
