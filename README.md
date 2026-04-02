@@ -1,79 +1,64 @@
 
 
-# 🎮 Game Show Interativo
+# 🎮 Game Show
 
-Um simulador de **Game Show de perguntas e respostas** desenvolvido com tecnologias web modernas. O projeto foca numa experiência de utilizador dinâmica, inspirada em interfaces de jogos de luta e transmissões de E-Sports, com suporte para dois jogadores locais.
-
----
+Um simulador de **Game Show de perguntas e respostas** de alta intensidade, desenvolvido com estética retro-futurista. O projeto foca numa experiência de duelo real entre dois jogadores, unindo a nostalgia dos arcades com mecânicas modernas de interrupção e áudio dinâmico.
 
 ## 🚀 Funcionalidades
 
-* **Duelo em Tempo Real:** Sistema de "buzzer" para capturar quem carrega na tecla primeiro.
-* **Interface Dinâmica:** HUD estilo jogo de luta com barras de pontuação coloridas e cronómetro central.
-* **Feedback Visual de Impacto:** Animações de "CORRETO" e "ERRADO" com efeitos neon e movimento elástico.
-* **Personalização:** Tela inicial que permite configurar os nomes dos jogadores antes de iniciar a partida.
-* **Design Responsivo:** Adaptado para ocupar a totalidade do ecrã (Full Screen) com estética Pop Art.
-
----
+* **Duelo de Velocidade:** Sistema de "buzzer" ultra-rápido para capturar quem pressiona a tecla primeiro.
+* **Modo Apresentador:** Mecânica exclusiva de interrupção que permite responder antes das alternativas, valendo pontuação dobrada (**100 pontos**).
+* **Áudio Dinâmico:** Trilha sonora que altera o *pitch* (velocidade) conforme o tempo acaba e sistema de *ducking* para realçar efeitos sonoros.
+* **Feedback Visual de Impacto:** Animações elásticas de "CORRETO" e "ERRADO", efeitos de trepidação de card e cronômetro de perigo.
+* **Imersão CRT:** Overlay de linhas de varredura (Scanlines) para simular monitores de tubo antigos.
 
 ## 🎨 Design & Estética
 
-O projeto utiliza uma combinação única de estilos:
-* **Tipografia:** Uso da fonte *Cyberform* para um toque futurista e *GameBattles* para legibilidade de placar.
-* **Cores:** Paleta de alto contraste baseada em Azul Neon (`#00d4ff`) e Rosa/Vermelho (`#ff0055`).
-* **Fundo:** Arte estilo Pop Art com raios de sol, mantendo a energia alta durante o jogo.
-
----
+O projeto utiliza uma combinação visual agressiva e nostálgica:
+* **Tipografia:** Uso da fonte **Cyberform** para títulos tecnológicos e **VCR OSD Mono** para a sensação de terminal antigo.
+* **Cores:** Alto contraste baseado em **Azul Neon (#00d4ff)** para o Jogador 1 e **Rosa Neon (#ff0055)** para o Jogador 2.
+* **Efeitos:** Glassmorphism (desfoque de fundo), sombras de neon e transições de *slide* lateral entre perguntas.
 
 ## 🛠️ Tecnologias Utilizadas
 
 | Tecnologia | Descrição |
 | :--- | :--- |
-| **HTML5** | Estrutura semântica dos elementos e containers do jogo. |
-| **CSS3** | Estilização avançada, filtros de borda (`text-stroke`), animações e Flexbox/Grid. |
-| **JavaScript (ES6+)** | Lógica do temporizador, gestão de pontuação, validação de respostas e manipulação do DOM. |
-
----
+| **HTML5** | Estrutura semântica, containers de áudio e integração com Canvas. |
+| **CSS3** | Animações complexas (`keyframes`), variáveis nativas, Flexbox/Grid e filtros CRT. |
+| **JavaScript (ES6+)** | Motor de lógica, gestão de estados, manipulação de áudio e eventos de teclado. |
+| **Canvas Confetti** | Biblioteca externa para celebrações de vitória com partículas personalizadas. |
 
 ## 📂 Estrutura de Pastas
 
 ```text
-/show-do-andrezao
+/gameshow
 │
-├── /css
-│   └── style.css          # Estilização completa e animações
-├── /js
-│   └── script.js         # Lógica do jogo e eventos
-├── /fonts                # Fontes personalizadas (Cyberform, GameBattles)
-├── /img                  # Backgrounds e assets visuais
-└── index.html            # Estrutura principal
+├── /style
+│   └── style.css         # Estilização cyberpunk e animações
+├── /script
+│   ├── script.js        # Motor principal e lógica de áudio
+│   └── perguntas.js     # Banco de dados com 10 sets de questões
+├── /fonts               # Fontes personalizadas (VCR OSD, Cyberform)
+├── /sounds              # SFX e Trilhas sonoras (MP3)
+├── /img                 # Backgrounds e imagens das perguntas
+└── index.html           # Estrutura principal do jogo
 ```
-
----
 
 ## ⌨️ Comandos do Jogo
 
 O sistema de resposta rápida é ativado pelas seguintes teclas:
-
-* **Jogador 1:** Tecla `A`
-* **Jogador 2:** Tecla `L`
-* **Navegação:** Rato ou atalhos configurados para selecionar as alternativas.
-
----
+* **Jogador 1:** Tecla **A**
+* **Jogador 2:** Tecla **L**
 
 ## 🔧 Como Executar
 
 1.  Faz o download ou clona este repositório.
-2.  Certifica-te de que as fontes estão na pasta `/fonts` para o carregamento correto.
+2.  Certifica-te de que os arquivos de áudio estão na pasta `/sounds` para a imersão completa.
 3.  Abre o ficheiro `index.html` em qualquer navegador moderno.
-4.  Para uma experiência imersiva, pressiona `F11` para colocar o navegador em ecrã inteiro.
-
----
+4.  Para uma experiência de Game Show real, pressiona **F11** para jogar em ecrã inteiro.
 
 ## 📝 Licença
 
-Este projeto foi desenvolvido para fins educativos e de entretenimento. Sente-te à vontade para o modificar e adaptar para os teus próprios eventos de perguntas e respostas!
+Este projeto foi desenvolvido para fins educativos e entretenimento competitivo. Sente-te à vontade para modificar os sets de perguntas no ficheiro `perguntas.js` e criar as tuas próprias categorias temáticas!
 
----
-
-> **Pro-Tip:** Podes ajustar o tempo de exibição das mensagens de erro ou acerto no ficheiro `script.js` alterando o valor do `setTimeout` para tornar o jogo mais rápido ou mais dramático.
+**Pro-Tip:** Podes ajustar a dificuldade alterando as constantes `VELOCIDADE_DIGITACAO` ou `DELAY_ALTERNATIVAS` no topo do ficheiro `script.js` para tornar o duelo ainda mais frenético.
