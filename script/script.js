@@ -46,9 +46,18 @@ function iniciarJogo() {
     document.querySelector("#player1 .player-name").textContent = nomeJ1 + " (A)";
     document.querySelector("#player2 .player-name").textContent = nomeJ2 + " (L)";
 
+    // 1. Esconde a tela inicial
     dom.telaInicial.classList.add("fade-out");
+
     setTimeout(() => {
         dom.telaInicial.style.display = "none";
+        
+        // 2. MOSTRA A INTERFACE DO JOGO (Removendo o hidden)
+        const gameWrapper = document.querySelector(".game-wrapper");
+        if (gameWrapper) {
+            gameWrapper.classList.remove("hidden");
+        }
+
         jogoIniciado = true;
         carregarPergunta(); 
     }, 500);
@@ -236,7 +245,7 @@ function mostrarFeedbackRespostas(acertou, indiceEscolhido) {
     setTimeout(() => {
         overlayAtivo.classList.add("hidden");
         revelarRespostaNoCard(indiceEscolhido);
-    }, 1500); 
+    }, 3000); 
 }
 
 function revelarRespostaNoCard(indiceEscolhido) {
