@@ -358,13 +358,15 @@ function exibirBotoesApresentador() {
 /**
  * 8. VALIDAÇÃO, FEEDBACK E REVELAÇÃO
  */
-function validarResposta(escolha) {
+ function validarResposta(escolha) {
     if (jogadorAtivo === null) return;
-
     clearInterval(cronometroInterval);
 
-    const correta = perguntas[indiceAtual].correta;
-    let acertou = (typeof escolha === 'boolean') ? escolha : (escolha === correta);
+    const p = perguntas[indiceAtual];
+    const corretaIndex = p.correta;
+    const textoCorreto = p.alternativas[corretaIndex];
+
+    let acertou = (typeof escolha === 'boolean') ? escolha : (escolha === corretaIndex);
     let indiceEscolhido = (typeof escolha === 'number') ? escolha : null;
 
     const jogadorQueRespondeu = jogadorAtivo;
@@ -375,6 +377,11 @@ function validarResposta(escolha) {
         pontos[jogadorQueRespondeu] += ganho;
     } else {
         pontos[jogadorQueRespondeu] -= 50;
+    }
+
+    if (perguntaInterrompida) {
+        dom.respondingNow.style.display = "block";
+        dom.respondingNow.innerHTML = `RESPOSTA CORRETA: <span style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">${textoCorreto}</span>`;
     }
 
     atualizarPlacar();
@@ -433,6 +440,10 @@ function revelarRespostaNoCard(indiceEscolhido) {
         }
     });
 
+    const textoCorreto = p.alternativas[p.correta];
+    dom.respondingNow.innerHTML = `RESPOSTA CORRETA: <span style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">${textoCorreto}</span>`;
+    dom.respondingNow.classList.remove("hidden");
+
     const container = document.createElement("div");
     container.className = "next-btn-container";
     
@@ -448,9 +459,7 @@ function revelarRespostaNoCard(indiceEscolhido) {
     btnNext.onclick = () => proximaPergunta();
 
     container.appendChild(btnNext);
-    document.body.appendChild(container); 
-    
-    dom.respondingNow.textContent = "Resultado da Rodada";
+    document.body.appendChild(container);
 }
 
 /**
