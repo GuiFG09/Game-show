@@ -15,6 +15,24 @@ let perguntaInterrompida = false;
 let tempoRestante = 30;
 let nomeJ1 = "Jogador 1", nomeJ2 = "Jogador 2";
 
+const playlistPerguntas = [
+    "sounds/bg/bg-music2.mp3",
+    "sounds/bg/bg-music3.mp3",
+    "sounds/bg/bg-music4.mp3",
+    "sounds/bg/bg-music.mp3",
+    "sounds/bg/bg-music5.mp3"
+];
+
+function prepararMusicaPergunta() {
+    const audioElement = document.getElementById("bg-music");
+    const sorteada = playlistPerguntas[Math.floor(Math.random() * playlistPerguntas.length)];
+    
+    audioElement.src = sorteada;
+    audioElement.volume = 0.4;
+    
+    musicaBG = audioElement; 
+}
+
 const pontos = { 1: 0, 2: 0 };
 
 const dom = {
@@ -118,37 +136,46 @@ function tocarMusica() {
  * 5. FLUXO DO JOGO E PERGUNTAS
  */
 function iniciarJogo() {
-    bloqueioAudioMenu = true; 
-
-    if (musicaMenu) {
-        musicaMenu.pause();
-        musicaMenu.currentTime = 0;
-    }
+    const menuMusic = document.getElementById("menu-music");
     
-    tocarMusica();
-
-    if (!perguntas || perguntas.length === 0) {
-        alert("Por favor, selecione um conjunto de perguntas no menu antes de começar!");
-        bloqueioAudioMenu = false; // 
-        return;
+    // Aplicação da correção de áudio
+    if (menuMusic) {
+        menuMusic.muted = true; 
+        menuMusic.pause();
+        menuMusic.currentTime = 0;
     }
-
-    nomeJ1 = dom.nameInput1.value || "Jogador 1";
-    nomeJ2 = dom.nameInput2.value || "Jogador 2";
-
-    document.querySelector("#player1 .player-name").textContent = nomeJ1 + " (A)";
-    document.querySelector("#player2 .player-name").textContent = nomeJ2 + " (L)";
-
-    dom.telaInicial.classList.add("fade-out");
 
     setTimeout(() => {
-        dom.telaInicial.style.display = "none";
-        const gameWrapper = document.querySelector(".game-wrapper");
-        if (gameWrapper) gameWrapper.classList.remove("hidden");
+        prepararMusicaPergunta();
+        if (musicaBG) {
+            musicaBG.muted = false;
+            musicaBG.play().catch(e => console.log("Erro ao iniciar áudio:", e));
+        }
+        
+        // Mantendo o restante da sua lógica original intacta
+        if (!perguntas || perguntas.length === 0) {
+            alert("Por favor, selecione um conjunto de perguntas no menu antes de começar!");
+            bloqueioAudioMenu = false; 
+            return;
+        }
 
-        jogoIniciado = true;
-        carregarPergunta(); 
-    }, 500);
+        nomeJ1 = dom.nameInput1.value || "Jogador 1";
+        nomeJ2 = dom.nameInput2.value || "Jogador 2";
+
+        document.querySelector("#player1 .player-name").textContent = nomeJ1 + " (A)";
+        document.querySelector("#player2 .player-name").textContent = nomeJ2 + " (L)";
+
+        dom.telaInicial.classList.add("fade-out");
+
+        setTimeout(() => {
+            dom.telaInicial.style.display = "none";
+            const gameWrapper = document.querySelector(".game-wrapper");
+            if (gameWrapper) gameWrapper.classList.remove("hidden");
+
+            jogoIniciado = true;
+            carregarPergunta(); 
+        }, 500);
+    }, 100); 
 }
 
 function carregarPergunta() {
