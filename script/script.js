@@ -544,12 +544,14 @@ function finalizarJogo() {
 
     if (pontos[1] > pontos[2]) {
         vencedor = nomeJ1; pontosVencedor = pontos[1]; classeCor = "win-p1";
-        document.querySelector(".winner-card").style.borderColor = "#ffcc00";
-        document.querySelector(".winner-card").style.boxShadow = "0 0 80px rgba(255, 204, 0, 0.4)";
-    } else if (pontos[2] > pontos[1]) {
-        vencedor = nomeJ2; pontosVencedor = pontos[2]; classeCor = "win-p2";
         document.querySelector(".winner-card").style.borderColor = "#ffffff";
         document.querySelector(".winner-card").style.boxShadow = "0 0 80px rgba(255, 255, 255, 0.4)";
+
+    } else if (pontos[2] > pontos[1]) {
+        vencedor = nomeJ2; pontosVencedor = pontos[2]; classeCor = "win-p2";
+        document.querySelector(".winner-card").style.borderColor = "#ffcc00";
+        document.querySelector(".winner-card").style.boxShadow = "0 0 80px rgba(255, 204, 0, 0.4)";
+        
     } else {
         vencedor = "EMPATE"; pontosVencedor = pontos[1]; classeCor = "";
     }
