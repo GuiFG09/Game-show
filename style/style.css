@@ -20,8 +20,8 @@
 ------------------------------------------------------------ */
 :root {
     --bg-color: #0a0a0c;
-    --player1-color: #00d4ff; 
-    --player2-color: #ff0055; 
+    --player2-color: #de8f0c; 
+    --player1-color: #333333; 
     --accent-color: #ffffff; 
     --font-main: 'VCR_OSD', 'Segoe UI', sans-serif;
 }
@@ -32,7 +32,7 @@
 
 body {
     margin: 0;
-    background-image: url('../img/vecteezy_sun-light-rays-sun-pop-art-retro-vintage-style-background_35514284.jpg');
+    background-image: url('../img/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -105,8 +105,8 @@ button, input, select, textarea, .info-box span, .key-hint {
     -webkit-text-stroke: 0.01px #ffffff;
 }
 
-.t-blue { color: #00d4ff; }
-.t-red { color: #ff0055; }
+.t-blue { color: #333333; }
+.t-red { color: #de8f0c; }
 
 .controls-info {
     display: flex;
@@ -127,8 +127,8 @@ button, input, select, textarea, .info-box span, .key-hint {
     transition: transform 0.2s;
 }
 
-.info-box.p1 { background: var(--player1-color); }
 .info-box.p2 { background: var(--player2-color); }
+.info-box.p1 { background: var(--player1-color); }
 
 .info-box input {
     width: 90%;
@@ -302,8 +302,23 @@ button, input, select, textarea, .info-box span, .key-hint {
 
 .player-box.left::before, .player-box.right::before { border-color: #ffffff; }
 
-.text-p1 { color: var(--player1-color) !important; text-shadow: 0 0 10px rgba(0, 212, 255, 0.5); }
-.text-p2 { color: var(--player2-color) !important; text-shadow: 0 0 10px rgba(255, 0, 85, 0.5); }
+.text-p2 { 
+    color: #de8f0c !important; 
+    text-shadow: 
+        0 0 5px #ffcc00, 
+        0 0 15px #de8f0c, 
+        0 0 30px rgba(222, 143, 12, 0.8); 
+    font-weight: bold;
+}
+
+.text-p1 { 
+    color: #131212 !important; 
+    text-shadow: 
+        0 0 5px #ffffff, 
+        0 0 10px #ffffff, 
+        0 0 20px rgba(255, 255, 255, 0.5); 
+    font-weight: bold;
+}
 
 .timer-box {
     position: absolute;
@@ -579,8 +594,12 @@ button, input, select, textarea, .info-box span, .key-hint {
     font-size: 4rem;
     margin-bottom: 20px;
     letter-spacing: 10px;
-    color: #ffcc00; 
-    animation: pulse-gold 2s infinite;
+    color: #00f2ff; 
+    text-shadow: 
+        0 0 10px #00f2ff, 
+        0 0 20px #00f2ff, 
+        0 0 40px rgba(0, 242, 255, 0.5);
+    animation: pulse-cyan 2s infinite;
 }
 
 #winner-name { font-size: 3.5rem; display: block; margin-bottom: 10px; text-transform: uppercase; }
@@ -672,14 +691,28 @@ canvas {
     to { opacity: 1; transform: scale(1); }
 }
 
-@keyframes pulse-gold {
-    0% { text-shadow: 0 0 10px #ffcc00; }
-    50% { text-shadow: 0 0 30px #ffcc00, 0 0 60px #ffcc00; }
-    100% { text-shadow: 0 0 10px #ffcc00; }
+@keyframes pulse-cyan {
+    0% { transform: scale(1); text-shadow: 0 0 10px #00f2ff; }
+    50% { transform: scale(1.05); text-shadow: 0 0 30px #00f2ff, 0 0 50px #00f2ff; }
+    100% { transform: scale(1); text-shadow: 0 0 10px #00f2ff; }
 }
 
 .shake-animation { animation: shake 0.4s ease-in-out; }
 .fade-in-element { animation: fadeIn 0.5s ease forwards; }
 
-.win-p1 { color: var(--player1-color); text-shadow: 0 0 20px var(--player1-color); }
-.win-p2 { color: var(--player2-color); text-shadow: 0 0 20px var(--player2-color); }
+.win-p2 { 
+    color: #de8f0c; 
+    text-shadow: 
+        0 0 10px #ffcc00, 
+        0 0 30px #de8f0c, 
+        0 0 50px #ffcc00; 
+}
+
+.win-p1 { 
+    color: #333333; 
+    text-shadow: 
+        0 0 10px #ffffff, 
+        0 0 30px #ffffff, 
+        0 0 50px rgba(255, 255, 255, 0.8); 
+    font-weight: 900;
+}
