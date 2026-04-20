@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: 'Cyberform';
-    src: url('../fonts/cyberformital.ttf') format('truetype'); 
+    src: url('../fonts/cyberformital.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
 }
@@ -20,9 +20,9 @@
 ------------------------------------------------------------ */
 :root {
     --bg-color: #0a0a0c;
-    --player2-color: #de8f0c; 
-    --player1-color: #333333; 
-    --accent-color: #ffffff; 
+    --player2-color: #de8f0c;
+    --player1-color: #333333;
+    --accent-color: #ffffff;
     --font-main: 'VCR_OSD', 'Segoe UI', sans-serif;
 }
 
@@ -54,7 +54,7 @@ body {
     position: fixed;
     top: 0; left: 0;
     width: 100vw; height: 100vh;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), 
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%),
                 linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
     background-size: 100% 3px, 3px 100%;
     pointer-events: none;
@@ -76,7 +76,7 @@ button, input, select, textarea, .info-box span, .key-hint {
 #start-screen {
     position: fixed;
     inset: 0;
-    background: transparent; 
+    background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,8 +88,8 @@ button, input, select, textarea, .info-box span, .key-hint {
     padding: 40px;
     width: 90%;
     max-width: 800px;
-    background: transparent; 
-    border: none; 
+    background: transparent;
+    border: none;
     box-shadow: none;
 }
 
@@ -123,7 +123,7 @@ button, input, select, textarea, .info-box span, .key-hint {
     gap: 10px;
     flex: 1;
     min-width: 250px;
-    border: 2px solid #ffffff; 
+    border: 2px solid #ffffff;
     transition: transform 0.2s;
 }
 
@@ -137,7 +137,7 @@ button, input, select, textarea, .info-box span, .key-hint {
     background: rgba(0, 0, 0, 0.2);
     color: white;
     text-align: center;
-    font-size: 1.8rem; 
+    font-size: 1.8rem;
     font-weight: bold;
 }
 
@@ -187,14 +187,15 @@ button, input, select, textarea, .info-box span, .key-hint {
     position: absolute;
     top: 20px;
     right: 20px;
-    background: transparent;
-    z-index: 100;
-    color: white;
-    text-align: right;
+    z-index: 1000; /* Garantir que fique acima de tudo */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-height: 90vh; /* Limita a altura para não sumir da tela */
 }
 
 #toggle-menu {
-    background: transparent;
+    background: #000; /* Fundo preto para destaque */
     border: 2px solid #ffffff;
     color: #ffffff;
     padding: 10px 25px;
@@ -204,7 +205,7 @@ button, input, select, textarea, .info-box span, .key-hint {
     text-transform: uppercase;
     cursor: pointer;
     transition: 0.3s;
-    outline: none;
+    width: 200px; /* Largura fixa para alinhar com os itens abaixo */
 }
 
 #toggle-menu:hover {
@@ -214,13 +215,15 @@ button, input, select, textarea, .info-box span, .key-hint {
 }
 
 .menu-content {
-    margin-top: 10px;
+    margin-top: 5px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 5px;
     background: rgba(0, 0, 0, 0.9);
-    padding: 15px;
-    border: 1px solid #ffffff;
+    padding: 10px;
+    border: 2px solid #ffffff;
+    width: 200px;
+    overflow-y: auto; /* Habilita o scroll vertical se houver muitos temas */
 }
 
 .menu-content h3 {
@@ -229,20 +232,29 @@ button, input, select, textarea, .info-box span, .key-hint {
     text-align: center;
 }
 
+#set-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
 .set-btn {
     background: transparent;
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.4);
-    padding: 10px;
+    padding: 12px 10px;
     cursor: pointer;
     transition: 0.2s;
     font-family: var(--font-main);
     text-transform: uppercase;
+    font-size: 0.9rem;
+    text-align: center;
+    width: 100%; /* Ocupa toda a largura do menu lateral */
 }
 
 .set-btn:hover {
     border-color: #ffffff;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .set-btn.active {
@@ -267,10 +279,10 @@ button, input, select, textarea, .info-box span, .key-hint {
 
 .scoreboard {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    position: relative; 
+    position: relative;
     padding: 0 20px;
 }
 
@@ -280,15 +292,15 @@ button, input, select, textarea, .info-box span, .key-hint {
     text-align: center;
     width: 320px;
     position: relative;
-    background: transparent; 
+    background: transparent;
 }
 
 .player-name { font-size: 2rem; margin-bottom: 5px; }
 .score { font-size: 4rem; font-weight: bold; margin: 0; }
 
-.player-box.left, .player-box.right { 
-    border-color: #ffffff; 
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); 
+.player-box.left, .player-box.right {
+    border-color: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 .player-box::before {
@@ -302,21 +314,21 @@ button, input, select, textarea, .info-box span, .key-hint {
 
 .player-box.left::before, .player-box.right::before { border-color: #ffffff; }
 
-.text-p2 { 
-    color: #de8f0c !important; 
-    text-shadow: 
-        0 0 5px #ffcc00, 
-        0 0 15px #de8f0c, 
-        0 0 30px rgba(222, 143, 12, 0.8); 
+.text-p2 {
+    color: #de8f0c !important;
+    text-shadow:
+        0 0 5px #ffcc00,
+        0 0 15px #de8f0c,
+        0 0 30px rgba(222, 143, 12, 0.8);
     font-weight: bold;
 }
 
-.text-p1 { 
-    color: #131212 !important; 
-    text-shadow: 
-        0 0 5px #ffffff, 
-        0 0 10px #ffffff, 
-        0 0 20px rgba(255, 255, 255, 0.5); 
+.text-p1 {
+    color: #131212 !important;
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 10px #ffffff,
+        0 0 20px rgba(255, 255, 255, 0.5);
     font-weight: bold;
 }
 
@@ -324,14 +336,14 @@ button, input, select, textarea, .info-box span, .key-hint {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     font-size: 4.5rem;
     color: var(--accent-color);
     border: 5px solid var(--accent-color);
     padding: 10px 20px;
     min-width: 130px;
     text-align: center;
-    background: transparent; 
+    background: transparent;
     z-index: 100;
 }
 
@@ -421,7 +433,7 @@ button, input, select, textarea, .info-box span, .key-hint {
     padding: 20px 30px;
     cursor: pointer;
     transition: 0.2s;
-    opacity: 0; 
+    opacity: 0;
     font-size: 1.3rem;
 }
 
@@ -444,7 +456,7 @@ button, input, select, textarea, .info-box span, .key-hint {
 }
 
 .option-btn.btn-neutral {
-    opacity: 0.3; 
+    opacity: 0.3;
     filter: grayscale(1);
     cursor: default;
 }
@@ -487,7 +499,7 @@ button, input, select, textarea, .info-box span, .key-hint {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    transform: rotate(45deg); 
+    transform: rotate(45deg);
     transition: 0.2s;
 }
 
@@ -495,7 +507,7 @@ button, input, select, textarea, .info-box span, .key-hint {
     color: black;
     font-weight: bold;
     font-size: 1.5rem;
-    transform: rotate(-45deg); 
+    transform: rotate(-45deg);
 }
 
 .btn-correct .diamond-box, .btn-wrong-selected .diamond-box { background-color: #000 !important; }
@@ -578,9 +590,9 @@ button, input, select, textarea, .info-box span, .key-hint {
 #winner-overlay { background: rgba(0, 0, 0, 0.3) !important; }
 
 .winner-card {
-    background: rgba(0, 0, 0, 0.6); 
-    backdrop-filter: blur(10px); 
-    -webkit-backdrop-filter: blur(10px); 
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 4px solid #ffcc00;
     padding: 50px;
     text-align: center;
@@ -594,10 +606,10 @@ button, input, select, textarea, .info-box span, .key-hint {
     font-size: 4rem;
     margin-bottom: 20px;
     letter-spacing: 10px;
-    color: #00f2ff; 
-    text-shadow: 
-        0 0 10px #00f2ff, 
-        0 0 20px #00f2ff, 
+    color: #00f2ff;
+    text-shadow:
+        0 0 10px #00f2ff,
+        0 0 20px #00f2ff,
         0 0 40px rgba(0, 242, 255, 0.5);
     animation: pulse-cyan 2s infinite;
 }
@@ -606,23 +618,23 @@ button, input, select, textarea, .info-box span, .key-hint {
 #winner-score { font-size: 2rem; color: #ffffff; margin-bottom: 30px; }
 
 .winner-card .pergunta-btn {
-    background: transparent; 
-    border: 2px solid #ffffff; 
-    color: #ffffff; 
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
     padding: 12px 30px;
     font-size: 1.2rem;
     font-family: var(--font-main);
     cursor: pointer;
     text-transform: uppercase;
     transition: all 0.3s ease;
-    border-radius: 0; 
+    border-radius: 0;
     margin-top: 20px;
     outline: none;
 }
 
 .winner-card .pergunta-btn:hover {
-    background: #ffffff; 
-    color: #000000; 
+    background: #ffffff;
+    color: #000000;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
 }
 
@@ -700,19 +712,19 @@ canvas {
 .shake-animation { animation: shake 0.4s ease-in-out; }
 .fade-in-element { animation: fadeIn 0.5s ease forwards; }
 
-.win-p2 { 
-    color: #de8f0c; 
-    text-shadow: 
-        0 0 10px #ffcc00, 
-        0 0 30px #de8f0c, 
-        0 0 50px #ffcc00; 
+.win-p2 {
+    color: #de8f0c;
+    text-shadow:
+        0 0 10px #ffcc00,
+        0 0 30px #de8f0c,
+        0 0 50px #ffcc00;
 }
 
-.win-p1 { 
-    color: #333333; 
-    text-shadow: 
-        0 0 10px #ffffff, 
-        0 0 30px #ffffff, 
-        0 0 50px rgba(255, 255, 255, 0.8); 
+.win-p1 {
+    color: #333333;
+    text-shadow:
+        0 0 10px #ffffff,
+        0 0 30px #ffffff,
+        0 0 50px rgba(255, 255, 255, 0.8);
     font-weight: 900;
 }
