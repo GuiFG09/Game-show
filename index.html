@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style/style.css">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
+
 <body>
 
     <div class="crt-overlay"></div>
@@ -14,10 +16,10 @@
     <div id="start-screen">
         <div class="start-content">
             <h1 class="game-title">
-                <span class="t-blue">Game</span> 
+                <span class="t-blue">Game</span>
                 <span class="t-red">Show</span>
             </h1>
-            
+
             <div class="controls-info">
                 <div class="info-box p1">
                     <input type="text" id="name-p1" placeholder="Jogador 1" maxlength="20">
@@ -63,14 +65,14 @@
                 <div class="image-container">
                     <img id="question-image" src="" alt="" style="display: none;">
                 </div>
-                
+
                 <div class="question-text">
                     <h2 id="question-title">Aguardando início...</h2>
                     <p id="responding-now" class="hidden"></p>
                 </div>
 
                 <div class="options-grid" id="options-container">
-                    </div>
+                </div>
             </div>
         </main>
 
@@ -93,7 +95,8 @@
 
     <div id="timeout-overlay" class="feedback-overlay hidden">
         <div class="feedback-content" style="border-color: #ffaa00; box-shadow: 0 0 60px rgba(255, 170, 0, 0.6);">
-            <h2 class="wrong-text" style="color: #ffaa00; text-shadow: 0 0 30px rgba(255, 170, 0, 0.8);">TEMPO ESGOTADO</h2>
+            <h2 class="wrong-text" style="color: #ffaa00; text-shadow: 0 0 30px rgba(255, 170, 0, 0.8);">TEMPO ESGOTADO
+            </h2>
         </div>
     </div>
 
@@ -118,4 +121,5 @@
     <audio id="sound-victory" src="sounds/victory.mp3" preload="auto"></audio>
 
 </body>
+
 </html>
