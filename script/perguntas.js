@@ -74,6 +74,30 @@ const bancoDePerguntas = {
         { questao: "Qual destes filmes venceu o Oscar de Melhor Filme em 2024?", alternativas: ["Barbie", "Oppenheimer", "Pobres Criaturas", "Anatomia de uma Queda"], correta: 1 }
     ],
 
+    "FILMES_E_SERIES_3": [
+        { questao: "Qual é o nome do reino fictício onde se passa a maior parte da história de 'Game of Thrones'?", alternativas: ["Nárnia", "Westeros", "Hogwarts", "Terra Média"], correta: 1 },
+        { questao: "No filme 'Titanic', qual é o nome da pedra preciosa que a personagem Rose usa no colar?", alternativas: ["Coração do Oceano", "Estrela da Manhã", "Diamante de Sangue", "Rubi Real"], correta: 0 },
+        { questao: "Qual ator interpreta o personagem 'Jack Sparrow' na franquia Piratas do Caribe?", alternativas: ["Brad Pitt", "Tom Cruise", "Johnny Depp", "Will Smith"], correta: 2 },
+        { questao: "Em 'Toy Story', qual é o nome do menino que é o dono dos brinquedos Woody e Buzz?", alternativas: ["Andy", "Sid", "Billy", "Danny"], correta: 0 },
+        { questao: "Na série 'La Casa de Papel', qual é o codinome do líder do assalto à Casa da Moeda?", alternativas: ["Berlim", "Professor", "Tóquio", "Rio"], correta: 1 }
+    ],
+
+    "FILMES_E_SERIES_4": [
+        { questao: "Qual é a cor da pílula que Neo escolhe tomar no filme 'Matrix' para descobrir a verdade?", alternativas: ["Azul", "Verde", "Amarela", "Vermelha"], correta: 3 },
+        { questao: "Na série 'The Walking Dead', qual é a arma icônica utilizada pelo personagem Rick Grimes?", alternativas: ["Besta", "Revolver Colt Python", "Katana", "Bastão de Beisebol"], correta: 1 },
+        { questao: "Qual filme de animação da Disney conta a história de uma família de super-heróis?", alternativas: ["Os Incríveis", "Frozen", "Moana", "Enrolados"], correta: 0 },
+        { questao: "Quem é a personagem principal da série 'Wandinha' (Wednesday) da Netflix?", alternativas: ["Enid Sinclair", "Morticia Addams", "Wandinha Addams", "Lydia Deetz"], correta: 2 },
+        { questao: "No universo de Harry Potter, qual animal representa a casa Grifinória?", alternativas: ["Cobra", "Coruja", "Texugo", "Leão"], correta: 3 }
+    ],
+
+    "FILMES_E_SERIES_5": [
+        { questao: "No seriado 'Chaves', qual é o nome do personagem que sempre chega na vila para cobrar o aluguel?", alternativas: ["Seu Madruga", "Quico", "Seu Barriga", "Professor Girafales"], correta: 2 },
+        { questao: "Qual é o nome do ogro verde que vive em um pântano e tem um burro como melhor amigo?", alternativas: ["Shrek", "Hulk", "Grinch", "Sulley"], correta: 0 },
+        { questao: "Na franquia 'Vingadores', qual vilão estala os dedos para apagar metade da vida no universo?", alternativas: ["Loki", "Ultron", "Kang", "Thanos"], correta: 3 },
+        { questao: "Qual é o nome do feitiço que Hermione corrige a pronúncia de Rony no primeiro filme?", alternativas: ["Levicorpus", "Wingardium Leviosa", "Expecto Patronum", "Vingardium Leviosa"], correta: 1 },
+        { questao: "Na série 'Stranger Things', qual é o nome da dimensão paralela e sombria?", alternativas: ["Mundo Invertido", "Limbo", "Vazio", "Multiverso"], correta: 0 }
+    ],
+
     // --- Games ---
     "GAMES_1": [
         { questao: "Em qual jogo existe o personagem Kratos?", alternativas: ["Fallout 4", "Hogwarts Legacy", "Grand Theft Auto", "God of War"], correta: 3 },
