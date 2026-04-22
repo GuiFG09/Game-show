@@ -58,15 +58,15 @@ const bancoDePerguntas = {
     ],
 
     // --- Filmes e Séries ---
-    "FILMES_1": [
+    "FILMES_E_SERIES 1": [
         { questao: "Quem é o diretor do filme 'Oppenheimer' (2023)?", alternativas: ["Steven Spielberg", "Christopher Nolan", "Quentin Tarantino", "Martin Scorsese"], correta: 1 },
-        { questao: "Qual destes super-heróis faz parte dos Vingadores originais nos quadrinhos?", alternativas: ["Homem-Aranha", "Homem-Formiga", "Pantera Negra", "Doutor Estranho"], correta: 1 },
+        { questao: "Qual super-herói do universo Marvel tem o poder de mudar o seu própio tamanho?", alternativas: ["Homem-Aranha", "Homem-Formiga", "Pantera Negra", "Doutor Estranho"], correta: 1 },
         { questao: "Quem interpretou o Coringa no filme 'Batman: O Cavaleiro das Trevas'?", alternativas: ["Joaquin Phoenix", "Jared Leto", "Heath Ledger", "Jack Nicholson"], correta: 2 },
         { questao: "Qual o nome do martelo do Thor?", alternativas: ["Mjolnir", "Stormbreaker", "Gungnir", "Leviathan"], correta: 0 },
         { questao: "Quem é o vilão principal da franquia 'Star Wars'?", alternativas: ["Darth Vader", "Voldemort", "Thanos", "Sauron"], correta: 0 }
     ],
 
-    "FILMES_2": [
+    "FILMES_E_SERIES 2": [
         { questao: "Na série Breaking Bad, qual o nome do protagonista?", alternativas: ["Heisenberg", "Jesse Pinkman", "Walter White", "Hector Salamanca"], correta: 2 },
         { questao: "Em qual série de TV aparece a personagem 'Eleven'?", alternativas: ["Stranger Things", "Dark", "The Boys", "Black Mirror"], correta: 0 },
         { questao: "Qual é o nome do robô protagonista do filme da Disney/Pixar de 2008?", alternativas: ["R2-D2", "WALL-E", "Baymax", "Bumblebee"], correta: 1 },
@@ -84,7 +84,7 @@ const bancoDePerguntas = {
     ],
 
     "GAMES_2": [
-        { questao: "Qual jogo de Battle Royale permite construir estruturas e seus eventos ao vivo e colaborações com marcas", alternativas: ["Free Fire", "Fortnite", "PUBG", "Apex Legends"], correta: 1 },
+        { questao: "Qual jogo de Battle Royale ficou famoso pelo seu modo de construção e colaborações?", alternativas: ["Free Fire", "Fortnite", "PUBG", "Apex Legends"], correta: 1 },
         { questao: "No Street Fighter, como se chama a bola de energia lançada por Ryu?", alternativas: ["Hadouken", "Shoryuken", "Fatality", "Tiger Robocop"], correta: 0 },
         { questao: "Qual jogo consiste em lançar pássaros com um estilingue para destruir porcos?", alternativas: ["Candy Crush", "Subway Surfers", "Angry Birds", "Pou"], correta: 2 },
         { questao: "Em qual franquia de terror os jogadores enfrentam a corporação Umbrella?", alternativas: ["Silent Hill", "Resident Evil", "The Last of Us", "Outlast"], correta: 1 },
@@ -147,7 +147,24 @@ const bancoDePerguntas = {
         { questao: "Quem é conhecido como o 'Rei do Rock'?", alternativas: ["Elvis Presley", "Freddie Mercury", "Mick Jagger", "John Lennon"], correta: 0 },
         { questao: "Qual o nome do desenho animado em que um garoto ganha poderes através de um dispositivo alienígena?", alternativas: ["Timmy Turner", "Shaun", "Ben 10", "Juniper Lee"], correta: 2 },
         { questao: "Como é popularmente conhecida a permissão médica para deixar um hospital, após a internação?", alternativas: ["Consulta", "Alta", "Atestado", "Acompanhamento"], correta: 1 },
-        { questao: "O termo popular 'Cangote' é usado para se referir a qual parte do corpo humano?", alternativas: ["Cabelo", "Mãos", "Pernas", "Pescoço"], correta: 3 }
+        { questao: "O termo popular 'Cangote' é usado para se referir a qual parte do corpo humano?", alternativas: ["Cabelo", "Mãos", "Pernas", "Pescoço"], correta: 3 },
+        { questao: "Quantos anos durou a 'Guerra dos Cem Anos'?", alternativas: ["100 anos", "116 anos", "99 anos", "105 anos"], correta: 1 }
+    ],
+
+    "GERAL_4": [
+        { questao: "Qual é o maior osso do corpo humano?", alternativas: ["Costela", "Fêmur", "Crânio", "Tíbia"], correta: 1 },
+        { questao: "Qual dessas cores NÃO faz parte das cores do arco-íris?", alternativas: ["Anil", "Violeta", "Rosa", "Laranja"], correta: 2 },
+        { questao: "Qual é o nome do processo em que as plantas transformam luz em energia?", alternativas: ["Respiração", "Combustão", "Transpiração", "Fotossíntese"], correta: 3 },
+        { questao: "Qual é a montanha mais alta do mundo acima do nível do mar?", alternativas: ["K2", "Monte Everest", "Monte Fuji", "Pico da Neblina"], correta: 1 },
+        { questao: "Qual é o planeta mais próximo do Sol?", alternativas: ["Vênus", "Terra", "Marte", "Mercúrio"], correta: 3 }
+    ],
+
+    "GERAL_5": [
+        { questao: "Qual o nome da peça do xadrez que pode se mover em 'L'?", alternativas: ["Bispo", "Torre", "Cavalo", "Peão"], correta: 2 },
+        { questao: "Qual é o oceano que banha toda a costa do Brasil?", alternativas: ["Oceano Pacífico", "Oceano Índico", "Oceano Ártico", "Oceano Atlântico"], correta: 3 },
+        { questao: "Quem foi o inventor da lâmpada elétrica?", alternativas: ["Thomas Edison", "Nikola Tesla", "Albert Einstein", "Graham Bell"], correta: 0 },
+        { questao: "Qual é o metal cujo símbolo químico é 'Au'?", alternativas: ["Prata", "Cobre", "Ouro", "Alumínio"], correta: 2 },
+        { questao: "Em qual país o esporte 'Cricket' é o mais popular?", alternativas: ["Japão", "Paraguai", "Índia", "Polônia"], correta: 2 },
     ],
 
     "ESPORTE_1": [
@@ -156,5 +173,14 @@ const bancoDePerguntas = {
         { questao: "Quantos jogadores de cada lado entram em campo numa partida oficial de futebol?", alternativas: ["10", "12", "11", "9"], correta: 2 },
         { questao: "Qual é o estilo de natação onde o nadador fica de costas para o fundo da piscina?", alternativas: ["Crawl", "Borboleta", "Peito", "Costas"], correta: 3 },
         { questao: "Nas Olimpíadas, qual é a distância exata de uma maratona?", alternativas: ["42,195 km", "40 km", "45 km", "38,5 km"], correta: 0 }
-    ]
+    ],
+
+    "ESPORTE_2": [
+            { questao: "No vôlei, qual é o nome do jogador especialista em defesa que usa uma camisa de cor diferente?", alternativas: ["Levantador", "Líbero", "Defensor", "Central"], correta: 1 },
+            { questao: "Qual é o nome do esporte que utiliza uma peteca e uma raquete?", alternativas: ["Tênis de Mesa", "Badminton", "Squash", "Padel"], correta: 1 },
+            { questao: "Quantos tempos (quarters) tem uma partida de futebol americano (NFL)?", alternativas: ["2", "3", "4", "5"], correta: 2 },
+            { questao: "No boxe masculino, em qual categoria ficam os lutadores com peso entre 52-53kg?", alternativas: ["Peso Galo", "Peso Mosca", "Peso Pena", "Peso Leve"], correta: 0 },
+            { questao: "Qual tecnica é usada no tênis para separar os pés e ter melhor tempo de reação?", alternativas: ["Uso do tronco", "Smash", "Split Step", "Saque"], correta: 2 }
+    ],
+
 };
