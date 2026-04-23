@@ -4,12 +4,12 @@ const bancoDePerguntas = {
         { questao: "No JavaScript, qual palavra-chave é usada para declarar uma variável que não pode ser reatribuída?", alternativas: ["var", "let", "const", "static"], correta: 2 },
         { questao: "Qual linguagem de programação é famosa pelo seu logotipo de uma xícara de café?", alternativas: ["Python", "C#", "Java", "PHP"], correta: 2 },
         { questao: "Em programação, o que significa a sigla API?", alternativas: ["Advanced Program Integration", "Application Programming Interface", "Automated Protocol Input", "Array Process Instance"], correta: 1 },
-        { questao: "Qual tag HTML é usada para inserir uma imagem?", alternativas: ["<picture>", "<img>", "<src>", "<figure>"], correta: 1 },
+        { questao: "Qual tag HTML é usada para inserir uma imagem?", alternativas: ["picture", "img", "src", "figure"], correta: 1 },
         { questao: "No CSS, qual valor da propriedade 'display' esconde um elemento totalmente?", alternativas: ["hidden", "invisible", "none", "block"], correta: 2 }
     ],
 
     "TI_2": [
-        { questao: "No JavaScript, como comentamos múltiplas linhas?", alternativas: ["//", "#", "/* */", ""], correta: 2 },
+        { questao: "No JavaScript, como comentamos múltiplas linhas?", alternativas: ["//", "#", "/* */", "///"], correta: 2 },
         { questao: "Qual é o nome do sistema de arquivos padrão do Windows?", alternativas: ["FAT32", "NTFS", "APFS", "EXT4"], correta: 1 },
         { questao: "Qual protocolo é utilizado para transferir dados de forma segura na web?", alternativas: ["HTTP", "HTTPS", "FTP", "SSH"], correta: 1 },
         { questao: "Qual tipo de dado assume apenas os valores verdadeiros ou falso?", alternativas: ["String", "Integer", "Float", "Boolean"], correta: 3 },
@@ -19,7 +19,7 @@ const bancoDePerguntas = {
     "TI_3": [
         { questao: "Qual componente do computador é considerado o 'cérebro' do sistema, responsável por processar dados?", alternativas: ["Memória RAM", "Disco Rígido", "CPU", "Placa de Vídeo"], correta: 2 },
         { questao: "O que significa a sigla 'URL' na navegação de internet?", alternativas: ["Universal Resource Locator", "User Remote Link", "Unified Radio Line", "Unique Reset Log"], correta: 0 },
-        { questao: "Qual dessas memórias é volátil, ou seja, perde os dados quando o computador é desligado?", alternativas: ["SSD", "Pen Drive", "HD Externo", "Memória RAM"], correta: 3 },
+        { questao: "Qual o principal exemplo de memoria volátil?", alternativas: ["SSD", "Pen Drive", "HD Externo", "Memória RAM"], correta: 3 },
         { questao: "Quem é considerado o criador do sistema operacional Linux?", alternativas: ["Bill Gates", "Linus Torvalds", "Steve Jobs", "Mark Zuckerberg"], correta: 1 },
         { questao: "Qual é a função principal de um 'Firewall' em uma rede?", alternativas: ["Aumentar a velocidade", "Filtrar o tráfego e proteger", "Limpar arquivos inúteis", "Armazenar senhas"], correta: 1 }
     ],
@@ -42,7 +42,7 @@ const bancoDePerguntas = {
     ],
 
     "TI_6": [
-        { questao: "Qual dessas unidades de medida representa a maior quantidade de dados?", alternativas: ["Gigabyte", "Terabyte", "Petabyte", "Megabyte"], correta: 2 },
+        { questao: "Qual unidade de medida de armazenamento representa a maior quantidade de dados?", alternativas: ["Gigabyte", "Terabyte", "Petabyte", "Megabyte"], correta: 2 },
         { questao: "Qual comando do Git é usado para enviar as alterações locais para um repositório remoto?", alternativas: ["git pull", "git commit", "git push", "git add"], correta: 2 },
         { questao: "Qual linguagem é amplamente utilizada para Ciência de Dados e Inteligência Artificial?", alternativas: ["Ruby", "Python", "Swift", "C++"], correta: 1 },
         { questao: "Qual o nome do pequeno arquivo de texto que sites salvam no navegador para lembrar do usuário?", alternativas: ["Script", "Cache", "Cookie", "History"], correta: 2 },
@@ -69,7 +69,7 @@ const bancoDePerguntas = {
         { questao: "O que significa a sigla 'IDE' na programação?", alternativas: ["Integrated Development Environment", "Internal Data Engine", "Interface Design Element", "Input Device Error"], correta: 0 },
         { questao: "Qual é a função do comando 'CTRL + Z' na maioria dos softwares?", alternativas: ["Copiar", "Colar", "Desfazer", "Recortar"], correta: 2 },
         { questao: "Qual o nome do robô mascote do sistema operacional Android?", alternativas: ["Bugdroid", "R2-D2", "Apple Bot", "Dash"], correta: 0 },
-        { questao: "Qual dessas redes é considerada a 'vovó' da internet atual?", alternativas: ["Deep Web", "Arpanet", "Intranet", "Ethernet"], correta: 1 },
+        { questao: "Qual tipo de rede é considerada a 'vovó' da internet atual?", alternativas: ["Deep Web", "Arpanet", "Intranet", "Ethernet"], correta: 1 },
         { questao: "No CSS, qual unidade de medida é relativa ao tamanho da fonte do elemento pai?", alternativas: ["px", "em", "cm", "pt"], correta: 1 }
     ],
 
@@ -78,24 +78,24 @@ const bancoDePerguntas = {
         { questao: "Qual é o nome do fundador da Microsoft?", alternativas: ["Steve Jobs", "Mark Zuckerberg", "Bill Gates", "Jeff Bezos"], correta: 2 },
         { questao: "O que significa a sigla 'VPN'?", alternativas: ["Virtual Private Network", "Variable Protocol Node", "Visual Path Name", "Verified Public Number"], correta: 0 },
         { questao: "Qual símbolo é usado em JavaScript para verificar se dois valores são estritamente iguais?", alternativas: ["=", "==", "===", "!="], correta: 2 },
-        { questao: "Qual destes termos define o conjunto de componentes físicos de um computador?", alternativas: ["Software", "Firmware", "Hardware", "Middleware"], correta: 2 }
+        { questao: "Qual o termo define o conjunto de componentes físicos de um computador?", alternativas: ["Software", "Firmware", "Hardware", "Middleware"], correta: 2 }
     ],
 
     // --- Mundo Digital e Internet ---
     "DIGITAL_1": [
-        { questao: "Qual destas redes sociais foi comprada por Elon Musk e renomeada para 'X'?", alternativas: ["Facebook", "Instagram", "Twitter", "Reddit"], correta: 2 },
+        { questao: "Qual a rede social que foi comprada por Elon Musk e renomeada para 'X'?", alternativas: ["Facebook", "Instagram", "Twitter", "Reddit"], correta: 2 },
         { questao: "Qual é o nome da inteligência artificial da Microsoft?", alternativas: ["Siri", "Alexa", "Cortana", "Copilot"], correta: 3 },
-        { questao: "Qual rede social é focada em conexões profissionais e currículos?", alternativas: ["Instagram", "LinkedIn", "Threads", "BeReal"], correta: 1 },
+        { questao: "Qual a rede social é focada em conexões profissionais e currículos?", alternativas: ["Instagram", "LinkedIn", "Threads", "BeReal"], correta: 1 },
         { questao: "Qual o nome da assistente virtual da Apple?", alternativas: ["Alexa", "Siri", "Cortana", "Bixby"], correta: 1 },
         { questao: "Qual é o nome da principal criptomoeda do mercado mundial?", alternativas: ["Ethereum", "Dogecoin", "Bitcoin", "Litecoin"], correta: 2 }
     ],
 
     "DIGITAL_2": [
         { questao: "Qual foi a primeira ferramenta de busca na internet?", alternativas: ["Google", "Yahoo", "Archie", "Bing"], correta: 2 },
-        { questao: "Qual é o nome da inteligência artificial da Microsoft?", alternativas: ["Siri", "Alexa", "Cortana", "Copilot"], correta: 3 },
-        { questao: "Qual rede social é focada em conexões profissionais e currículos?", alternativas: ["Instagram", "LinkedIn", "Threads", "BeReal"], correta: 1 },
-        { questao: "Qual o nome da assistente virtual da Apple?", alternativas: ["Alexa", "Siri", "Cortana", "Bixby"], correta: 1 },
-        { questao: "Qual é o nome da principal criptomoeda do mercado mundial?", alternativas: ["Ethereum", "Dogecoin", "Bitcoin", "Litecoin"], correta: 2 }
+        { questao: "O que significa a sigla 'WWW' no início dos endereços de sites?", alternativas: ["World Wide Web", "Web World Wide", "Wide World Web", "Web World Way"], correta: 0 },
+        { questao: "Qual empresa é a dona do YouTube e do sistema Android?", alternativas: ["Meta", "Microsoft", "Amazon", "Google"], correta: 3 },
+        { questao: "Qual é o nome do criador da rede social Facebook?", alternativas: ["Steve Jobs", "Elon Musk", "Mark Zuckerberg", "Bill Gates"], correta: 2 },
+        { questao: "Como é chamado o símbolo usado para categorizar assuntos nas redes sociais?", alternativas: ["Arroba", "Hashtag", "Asterisco", "Underline"], correta: 1 }
     ],
 
     // --- Filmes e Séries ---
@@ -112,7 +112,7 @@ const bancoDePerguntas = {
         { questao: "Em qual série de TV aparece a personagem 'Eleven'?", alternativas: ["Stranger Things", "Dark", "The Boys", "Black Mirror"], correta: 0 },
         { questao: "Qual é o nome do robô protagonista do filme da Disney/Pixar de 2008?", alternativas: ["R2-D2", "WALL-E", "Baymax", "Bumblebee"], correta: 1 },
         { questao: "Qual o principal herói da Marvel que utiliza um escudo como arma?", alternativas: ["Hulk", "Capitão America", "Homem-aranha", "Thor"], correta: 1 },
-        { questao: "Qual destes filmes venceu o Oscar de Melhor Filme em 2024?", alternativas: ["Barbie", "Oppenheimer", "Pobres Criaturas", "Anatomia de uma Queda"], correta: 1 }
+        { questao: "Qual o filme vencedor do Oscar de Melhor Filme em 2024?", alternativas: ["Barbie", "Oppenheimer", "Pobres Criaturas", "Anatomia de uma Queda"], correta: 1 }
     ],
 
     "FILMES_E_SERIES_3": [
@@ -126,7 +126,7 @@ const bancoDePerguntas = {
     "FILMES_E_SERIES_4": [
         { questao: "Qual é a cor da pílula que Neo escolhe tomar no filme 'Matrix' para descobrir a verdade?", alternativas: ["Azul", "Verde", "Amarela", "Vermelha"], correta: 3 },
         { questao: "Na série 'The Walking Dead', qual é a arma icônica utilizada pelo personagem Rick Grimes?", alternativas: ["Besta", "Revolver Colt Python", "Katana", "Bastão de Beisebol"], correta: 1 },
-        { questao: "Qual filme de animação da Disney conta a história de uma família de super-heróis?", alternativas: ["Os Incríveis", "Frozen", "Moana", "Enrolados"], correta: 0 },
+        { questao: "Qual o filme de animação da Disney conta a história de uma família de super-heróis?", alternativas: ["Os Incríveis", "Frozen", "Moana", "Enrolados"], correta: 0 },
         { questao: "Quem é a personagem principal da série 'Wandinha' (Wednesday) da Netflix?", alternativas: ["Enid Sinclair", "Morticia Addams", "Wandinha Addams", "Lydia Deetz"], correta: 2 },
         { questao: "No universo de Harry Potter, qual animal representa a casa Grifinória?", alternativas: ["Cobra", "Coruja", "Texugo", "Leão"], correta: 3 }
     ],
@@ -135,7 +135,7 @@ const bancoDePerguntas = {
         { questao: "No seriado 'Chaves', qual é o nome do personagem que sempre chega na vila para cobrar o aluguel?", alternativas: ["Seu Madruga", "Quico", "Seu Barriga", "Professor Girafales"], correta: 2 },
         { questao: "Qual é o nome do ogro verde que vive em um pântano e tem um burro como melhor amigo?", alternativas: ["Shrek", "Hulk", "Grinch", "Sulley"], correta: 0 },
         { questao: "Na franquia 'Vingadores', qual vilão estala os dedos para apagar metade da vida no universo?", alternativas: ["Loki", "Ultron", "Kang", "Thanos"], correta: 3 },
-        { questao: "Qual é o nome do feitiço que Hermione corrige a pronúncia de Rony no primeiro filme?", alternativas: ["Levicorpus", "Wingardium Leviosa", "Expecto Patronum", "Vingardium Leviosa"], correta: 1 },
+        { questao: "Qual é o nome do feitiço que Hermione corrige a pronúncia de Rony no primeiro filme da franquia Harry Potter?", alternativas: ["Levicorpus", "Wingardium Leviosa", "Expecto Patronum", "Alohomora"], correta: 1 },
         { questao: "Na série 'Stranger Things', qual é o nome da dimensão paralela e sombria?", alternativas: ["Mundo Invertido", "Limbo", "Vazio", "Multiverso"], correta: 0 }
     ],
 
@@ -144,13 +144,13 @@ const bancoDePerguntas = {
         { questao: "Em qual jogo existe o personagem Kratos?", alternativas: ["Fallout 4", "Hogwarts Legacy", "Grand Theft Auto", "God of War"], correta: 3 },
         { questao: "Qual é o nome do protagonista da franquia de jogos 'The Legend of Zelda'?", alternativas: ["Zelda", "Ganon", "Link", "Sheik"], correta: 2 },
         { questao: "Qual é o bloco mais comum e básico no mundo de Minecraft?", alternativas: ["Diamante", "Terra", "Pedra", "Areia"], correta: 1 },
-        { questao: "Qual o nome do encanador italiano que é a mascote da Nintendo?", alternativas: ["Luigi", "Wario", "Mario", "Yoshi"], correta: 2 },
+        { questao: "Qual o nome do encanador italiano que é o mascote da Nintendo?", alternativas: ["Luigi", "Wario", "Mario", "Yoshi"], correta: 2 },
         { questao: "No jogo Pac-Man, qual é o alimento que permite ao jogador comer os fantasmas?", alternativas: ["Cereja", "Pastilha de Poder", "Morango", "Banana"], correta: 1 }
     ],
 
     "GAMES_2": [
         { questao: "Qual jogo de Battle Royale ficou famoso pelo seu modo de construção e colaborações?", alternativas: ["Free Fire", "Fortnite", "PUBG", "Apex Legends"], correta: 1 },
-        { questao: "No Street Fighter, como se chama a bola de energia lançada por Ryu?", alternativas: ["Hadouken", "Shoryuken", "Fatality", "Tiger Robocop"], correta: 0 },
+        { questao: "No jogo Street Fighter, como se chama a bola de energia lançada por Ryu?", alternativas: ["Hadouken", "Shoryuken", "Fatality", "Tiger Robocop"], correta: 0 },
         { questao: "Qual jogo consiste em lançar pássaros com um estilingue para destruir porcos?", alternativas: ["Candy Crush", "Subway Surfers", "Angry Birds", "Pou"], correta: 2 },
         { questao: "Em qual franquia de terror os jogadores enfrentam a corporação Umbrella?", alternativas: ["Silent Hill", "Resident Evil", "The Last of Us", "Outlast"], correta: 1 },
         { questao: "No Mario Kart, qual item persegue automaticamente o primeiro colocado?", alternativas: ["Casco Verde", "Banana", "Casco Azul", "Estrela"], correta: 2 }
@@ -169,7 +169,7 @@ const bancoDePerguntas = {
     "GEOGRAFIA_2": [
         { questao: "Qual é a capital da França?", alternativas: ["Londres", "Berlim", "Roma", "Paris"], correta: 3 },
         { questao: "Qual o maior deserto do mundo?", alternativas: ["Deserto do Saara", "Deserto da Antártida", "Deserto de Gobi", "Deserto do Atacama"], correta: 1 },
-        { questao: "Qual municipio cearense conhecido como 'A cidade dos três climas'?", alternativas: ["Itapipoca", "Umari", "Juazeiro do Norte", "Fortaleza"], correta: 0 },
+        { questao: "Qual o municipio cearense conhecido como 'A cidade dos três climas'?", alternativas: ["Itapipoca", "Umari", "Juazeiro do Norte", "Fortaleza"], correta: 0 },
         { questao: "Em que país está localizada 'La Rinconada', a cidade habitada mais alta do mundo?", alternativas: ["Peru", "Bolivia", "Colômbia", "Chile"], correta: 0 },
         { questao: "Qual é o menor país do mundo em termos de área territorial?", alternativas: ["Mónaco", "Malta", "Vaticano", "San Marino"], correta: 2 }
     ],
@@ -195,7 +195,7 @@ const bancoDePerguntas = {
     "GERAL_1": [
         { questao: "Em que ano o homem pisou na Lua pela primeira vez?", alternativas: ["1965", "1969", "1972", "1958"], correta: 1 },
         { questao: "Quem pintou a famosa obra 'Mona Lisa'?", alternativas: ["Vincent van Gogh", "Pablo Picasso", "Claude Monet", "Leonardo da Vinci"], correta: 3 },
-        { questao: "Quem escreveu 'Dom Casmurro'?", alternativas: ["Machado de Assis", "Monteiro Lobato", "Clarice Lispector", "Jorge Amado"], correta: 0 },
+        { questao: "Quem escreveu o livro de romance 'Dom Casmurro'?", alternativas: ["Machado de Assis", "Monteiro Lobato", "Clarice Lispector", "Jorge Amado"], correta: 0 },
         { questao: "Em qual país surgiram os Jogos Olímpicos?", alternativas: ["Itália", "Grécia", "Egito", "França"], correta: 1 },
         { questao: "Quem é o autor da saga 'Harry Potter'?", alternativas: ["J.R.R. Tolkien", "George R.R. Martin", "C.S. Lewis", "J.K. Rowling"], correta: 3 }
     ],
@@ -218,7 +218,7 @@ const bancoDePerguntas = {
 
     "GERAL_4": [
         { questao: "Qual é o maior osso do corpo humano?", alternativas: ["Costela", "Fêmur", "Crânio", "Tíbia"], correta: 1 },
-        { questao: "Qual dessas cores NÃO faz parte das cores do arco-íris?", alternativas: ["Anil", "Violeta", "Rosa", "Laranja"], correta: 2 },
+        { questao: "Qual é o único satélite natural da Terra?", alternativas: ["Sol", "Marte", "Lua", "Vênus"], correta: 2 },
         { questao: "Qual é o nome do processo em que as plantas transformam luz em energia?", alternativas: ["Respiração", "Combustão", "Transpiração", "Fotossíntese"], correta: 3 },
         { questao: "Qual é a montanha mais alta do mundo acima do nível do mar?", alternativas: ["K2", "Monte Everest", "Monte Fuji", "Pico da Neblina"], correta: 1 },
         { questao: "Qual é o planeta mais próximo do Sol?", alternativas: ["Vênus", "Terra", "Marte", "Mercúrio"], correta: 3 }
@@ -242,7 +242,7 @@ const bancoDePerguntas = {
 
     "GERAL_7": [
         { questao: "Quantos corações tem um polvo?", alternativas: ["Um", "Dois", "Três", "Quatro"], correta: 2 },
-        { questao: "Qual é a língua mais falada no mundo (por falantes nativos)?", alternativas: ["Inglês", "Espanhol", "Chinês Mandarim", "Hindi"], correta: 2 },
+        { questao: "Qual é a língua mais falada no mundo por falantes nativos?", alternativas: ["Inglês", "Espanhol", "Mandarim", "Hindi"], correta: 2 },
         { questao: "Qual é o nome da linha imaginária que divide a Terra em Hemisfério Norte e Sul?", alternativas: ["Trópico de Capricórnio", "Meridiano de Greenwich", "Linha do Equador", "Círculo Polar Ártico"], correta: 2 },
         { questao: "Quem escreveu a peça 'Romeu e Julieta'?", alternativas: ["William Shakespeare", "Machado de Assis", "Oscar Wilde", "Dante Alighieri"], correta: 0 },
         { questao: "Qual destes países é o berço da invenção do avião, segundo a história brasileira?", alternativas: ["Estados Unidos", "França", "Brasil", "Inglaterra"], correta: 2 }
@@ -252,12 +252,12 @@ const bancoDePerguntas = {
         { questao: "Qual é o monumento famoso de Paris que foi construído para a Exposição Universal de 1889?", alternativas: ["Arco do Triunfo", "Catedral de Notre-Dame", "Torre Eiffel", "Museu do Louvre"], correta: 2 },
         { questao: "Qual é o ingrediente principal da culinária japonesa usado para fazer o Sushi?", alternativas: ["Trigo", "Arroz", "Milho", "Cevada"], correta: 1 },
         { questao: "Em qual país surgiu a tradição de decorar árvores de Natal?", alternativas: ["Brasil", "Alemanha", "Estados Unidos", "França"], correta: 1 },
-        { questao: "Qual é a principal matéria-prima usada na fabricação do vidro?", alternativas: ["Argila", "Areia", "Petróleo", "Madeira"], correta: 1 },
-        { questao: "Qual é o nome do explorador que liderou a primeira expedição a dar a volta ao mundo?", alternativas: ["Cristóvão Colombo", "Vasco da Gama", "Fernão de Magalhães", "Marco Polo"], correta: 2 }
+        { questao: "Qual é a principal matéria-prima usada na fabricação do vidro?", alternativas: ["Argila", "Madeira", "Petróleo", "Areia"], correta: 3 },
+        { questao: "Qual é o nome do explorador que liderou a primeira expedição a dar a volta ao mundo?", alternativas: ["Fernão de Magalhães", "Vasco da Gama", "Cristovão Colombo", "Marco Polo"], correta: 0 }
     ],
 
     "GERAL_9": [
-        { questao: "Qual fruta é conhecida por ser o símbolo da cidade de Nova York (The Big Apple)?", alternativas: ["Pêra", "Laranja", "Maçã", "Cereja"], correta: 2 },
+        { questao: "Qual fruta é conhecida por ser o símbolo da cidade de Nova York?", alternativas: ["Pêra", "Laranja", "Maçã", "Cereja"], correta: 2 },
         { questao: "Qual é o nome da técnica japonesa de dobrar papel para criar figuras?", alternativas: ["Ikebana", "Sudoku", "Origami", "Bonsai"], correta: 2 },
         { questao: "Qual destes órgãos do corpo humano é responsável por filtrar o sangue e produzir urina?", alternativas: ["Fígado", "Pâncreas", "Rins", "Pulmões"], correta: 2 },
         { questao: "Quem foi o líder sul-africano que lutou contra o Apartheid e recebeu o Nobel da Paz?", alternativas: ["Martin Luther King", "Nelson Mandela", "Desmond Tutu", "Kofi Annan"], correta: 1 },
@@ -266,7 +266,7 @@ const bancoDePerguntas = {
 
     "GERAL_10": [
         { questao: "Qual é o nome da embarcação famosa que afundou em sua viagem inaugural em 1912?", alternativas: ["Britannic", "Olympic", "Titanic", "Lusitania"], correta: 2 },
-        { questao: "Qual é a cor da caixa-preta de um avião (usada para gravar dados de voo)?", alternativas: ["Preta", "Laranja", "Vermelha", "Branca"], correta: 1 },
+        { questao: "Qual é a cor da caixa-preta de um avião?", alternativas: ["Preta", "Laranja", "Vermelha", "Branca"], correta: 1 },
         { questao: "Em qual continente se localiza o Grand Canyon?", alternativas: ["Ásia", "América do Norte", "África", "Europa"], correta: 1 },
         { questao: "Qual é a substância mais dura encontrada na natureza?", alternativas: ["Ouro", "Ferro", "Diamante", "Grafite"], correta: 2 },
         { questao: "Qual o nome do satélite natural da Terra?", alternativas: ["Sol", "Lua", "Marte", "Estrela Dalva"], correta: 1 }
@@ -283,21 +283,21 @@ const bancoDePerguntas = {
     "ESPORTE_2": [
         { questao: "No vôlei, qual é o nome do jogador especialista em defesa que usa uma camisa de cor diferente?", alternativas: ["Levantador", "Líbero", "Defensor", "Central"], correta: 1 },
         { questao: "Qual é o nome do esporte que utiliza uma peteca e uma raquete?", alternativas: ["Tênis de Mesa", "Badminton", "Squash", "Padel"], correta: 1 },
-        { questao: "Quantos tempos (quarters) tem uma partida de futebol americano (NFL)?", alternativas: ["2", "3", "4", "5"], correta: 2 },
+        { questao: "Quantos tempos tem uma partida de futebol americano (NFL)?", alternativas: ["2", "3", "4", "5"], correta: 2 },
         { questao: "No boxe masculino, em qual categoria ficam os lutadores com peso entre 52-53kg?", alternativas: ["Peso Galo", "Peso Mosca", "Peso Pena", "Peso Leve"], correta: 0 },
         { questao: "Qual tecnica é usada no tênis para separar os pés e ter melhor tempo de reação?", alternativas: ["Uso do tronco", "Smash", "Split Step", "Saque"], correta: 2 }
     ],
 
     "MUSICA_1": [
         { questao: "Qual banda britânica lançou o icônico álbum 'The Dark Side of the Moon'' em 1973?", alternativas: ["The Beatles", "The Rolling Stones", "Pink Floyd", "Led Zeppelin"], correta: 2 },
-        { questao: " Quem é conhecida como a 'Rainha do Pop'?", alternativas: ["Whitney Houston", "Madonna", "Beyoncé", "Lady Gaga"], correta: 1 },
-        { questao: "Qual destes instrumentos NÃO é da família dos metais?", alternativas: ["Trompete", "Trombone", "Tuba", "Violino"], correta: 3 },
+        { questao: "Quem é conhecida como a 'Rainha do Pop'?", alternativas: ["Britney Spears", "Madonna", "Beyoncé", "Lady Gaga"], correta: 1 },
+        { questao: "Qual é o primeiro nome verdadeiro de Axl Rose, do Guns N' Roses?", alternativas: ["Jason", "William", "Billy", "Noel"], correta: 1 },
         { questao: "Quem compôs a famosa 'Quinta Sinfonia'?", alternativas: ["Mozart", "Bach", "Beethoven", "Vivaldi"], correta: 2 },
         { questao: "Qual cantor é conhecido como o 'Rei do Pop'?", alternativas: ["Elvis Presley", "Prince", "Michael Jackson", "Stevie Wonder"], correta: 2 }
     ],
 
     "MUSICA_2": [
-        { questao: "Qual cantor é conhecido mundialmente como o 'Rei do Reggae'?", alternativas: ["Mick Jagger", "Bob Marley", "Jimmy Cliff", "Peter Tosh"], correta: 1 },
+        { questao: "Qual cantor é conhecido mundialmente como o 'Rei do Reggae'?", alternativas: ["Ziggy Marley", "Bob Marley", "Jimmy Cliff", "Peter Tosh"], correta: 1 },
         { questao: "Qual banda de rock é famosa pela música 'Bohemian Rhapsody'?", alternativas: ["The Who", "Led Zeppelin", "Queen", "AC/DC"], correta: 2 },
         { questao: "Quantas cordas tem um violino padrão?", alternativas: ["3", "4", "5", "6"], correta: 1 },
         { questao: "Qual cantora detém o recorde de maior número de prêmios Grammy na história?", alternativas: ["Taylor Swift", "Adele", "Beyoncé", "Lady Gaga"], correta: 2 },
