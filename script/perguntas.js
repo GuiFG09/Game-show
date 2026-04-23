@@ -38,6 +38,47 @@ const bancoDePerguntas = {
         { questao: "Qual dessas siglas representa uma rede sem fio de curto alcance para troca de dados entre dispositivos?", alternativas: ["HTTP", "USB", "Bluetooth", "SATA"], correta: 2 },
         { questao: "No desenvolvimento de software, o que significa a sigla 'UI'?", alternativas: ["User Information", "User Interface", "Universal Input", "Under Inspection"], correta: 1 },
         { questao: "Qual tecnologia é usada para 'minerar' e registrar transações de criptomoedas como o Bitcoin?", alternativas: ["Cloud Computing", "Blockchain", "Big Data", "Deep Learning"], correta: 1 }
+
+    ],
+
+    "TI_6": [
+        { questao: "Qual dessas unidades de medida representa a maior quantidade de dados?", alternativas: ["Gigabyte", "Terabyte", "Petabyte", "Megabyte"], correta: 2 },
+        { questao: "Qual comando do Git é usado para enviar as alterações locais para um repositório remoto?", alternativas: ["git pull", "git commit", "git push", "git add"], correta: 2 },
+        { questao: "Qual linguagem é amplamente utilizada para Ciência de Dados e Inteligência Artificial?", alternativas: ["Ruby", "Python", "Swift", "C++"], correta: 1 },
+        { questao: "Qual o nome do pequeno arquivo de texto que sites salvam no navegador para lembrar do usuário?", alternativas: ["Script", "Cache", "Cookie", "History"], correta: 2 },
+        { questao: "Qual tecnologia é usada para carregar páginas web de forma assíncrona sem recarregar a tela?", alternativas: ["JSON", "AJAX", "XML", "Java"], correta: 1 },
+    ],
+
+    "TI_7": [
+        { questao: "O que significa a sigla 'SaaS' no mercado de tecnologia?", alternativas: ["Software as a Service", "System as a Solution", "Security as a Server", "Storage as a System"], correta: 0 },
+        { questao: "Qual é o nome do navegador de internet desenvolvido pela Google?", alternativas: ["Safari", "Edge", "Firefox", "Chrome"], correta: 3 },
+        { questao: "Em bancos de dados, o que significa a sigla 'CRUD'?", alternativas: ["Create, Read, Update, Delete", "Copy, Run, Undo, Deploy", "Cancel, Repair, Upload, Data", "Control, Refresh, Use, Debug"], correta: 0 },
+        { questao: "Qual o nome da tecnologia que permite pagar contas aproximando o celular da maquininha?", alternativas: ["Bluetooth", "NFC", "Wi-Fi", "GPS"], correta: 1 },
+        { questao: "Como é chamada a versão de teste de um software que vem antes do lançamento oficial?", alternativas: ["Alpha", "Beta", "Final", "Patch"], correta: 1 }
+    ],
+
+    "TI_8": [
+        { questao: "O que é um 'Bug' na área de programação?", alternativas: ["Um vírus potente", "Um erro ou falha no código", "Um componente de hardware", "Um tipo de hacker"], correta: 1 },
+        { questao: "Qual é o principal objetivo de um ataque de 'Ransomware'?", alternativas: ["Apagar arquivos", "Sequestrar dados e cobrar resgate", "Aumentar a velocidade", "Espionar a câmera"], correta: 1 },
+        { questao: "O que significa a sigla 'SSD', o sucessor do HD tradicional?", alternativas: ["Super Speed Drive", "Solid State Drive", "System Storage Data", "Safe Simple Disk"], correta: 1 },
+        { questao: "Qual é a principal função de um banco de dados NoSQL?", alternativas: ["Armazenar apenas textos", "Lidar com dados não estruturados e escalabilidade", "Substituir o uso de HTML", "Executar comandos diretamente no processador"], correta: 1 },
+        { questao: "O que caracteriza a tecnologia 'Docker' no ambiente de desenvolvimento?", alternativas: ["A criação de containers para isolar aplicações", "Um novo tipo de monitor de vídeo", "Uma linguagem de estilização de fontes", "O aumento físico da memória RAM"], correta: 0 }
+    ],
+
+    "TI_9": [
+        { questao: "O que significa a sigla 'IDE' na programação?", alternativas: ["Integrated Development Environment", "Internal Data Engine", "Interface Design Element", "Input Device Error"], correta: 0 },
+        { questao: "Qual é a função do comando 'CTRL + Z' na maioria dos softwares?", alternativas: ["Copiar", "Colar", "Desfazer", "Recortar"], correta: 2 },
+        { questao: "Qual o nome do robô mascote do sistema operacional Android?", alternativas: ["Bugdroid", "R2-D2", "Apple Bot", "Dash"], correta: 0 },
+        { questao: "Qual dessas redes é considerada a 'vovó' da internet atual?", alternativas: ["Deep Web", "Arpanet", "Intranet", "Ethernet"], correta: 1 },
+        { questao: "No CSS, qual unidade de medida é relativa ao tamanho da fonte do elemento pai?", alternativas: ["px", "em", "cm", "pt"], correta: 1 }
+    ],
+
+    "TI_10": [
+        { questao: "Qual tecnologia permite a conexão sem fio de periféricos como fones e mouses?", alternativas: ["Ethernet", "VGA", "Bluetooth", "HDMI"], correta: 2 },
+        { questao: "Qual é o nome do fundador da Microsoft?", alternativas: ["Steve Jobs", "Mark Zuckerberg", "Bill Gates", "Jeff Bezos"], correta: 2 },
+        { questao: "O que significa a sigla 'VPN'?", alternativas: ["Virtual Private Network", "Variable Protocol Node", "Visual Path Name", "Verified Public Number"], correta: 0 },
+        { questao: "Qual símbolo é usado em JavaScript para verificar se dois valores são estritamente iguais?", alternativas: ["=", "==", "===", "!="], correta: 2 },
+        { questao: "Qual destes termos define o conjunto de componentes físicos de um computador?", alternativas: ["Software", "Firmware", "Hardware", "Middleware"], correta: 2 }
     ],
 
     // --- Mundo Digital e Internet ---
@@ -191,6 +232,46 @@ const bancoDePerguntas = {
         { questao: "Em qual país o esporte 'Cricket' é o mais popular?", alternativas: ["Japão", "Paraguai", "Índia", "Polônia"], correta: 2 },
     ],
 
+    "GERAL_6": [
+        { questao: "Qual o nome do mascote da marca de alimentos frigorificos 'Sadia'?", alternativas: ["Assolino", "Dollynho", "Lek Trek", "Sam"], correta: 2 },
+        { questao: "Qual é o único mamifero que consegue voar verdadeiramente?", alternativas: ["Morcego", "Esquilo-voador", "Papagaio", "Galinha"], correta: 0 },
+        { questao: "Em qual país nasceu a rede de fast-food McDonald's?", alternativas: ["Canadá", "Reino Unido", "Alemanha", "Estados Unidos"], correta: 3 },
+        { questao: "Quem foi a primeira mulher a ganhar um Prémio Nobel?", alternativas: ["Marie Curie", "Madre Teresa", "Anne Frank", "Malala Yousafzai"], correta: 0 },
+        { questao: "Qual é a capital do Japão?", alternativas: ["Seul", "Pequim", "Banguecoque", "Tóquio"], correta: 3 }
+    ],
+
+    "GERAL_7": [
+        { questao: "Quantos corações tem um polvo?", alternativas: ["Um", "Dois", "Três", "Quatro"], correta: 2 },
+        { questao: "Qual é a língua mais falada no mundo (por falantes nativos)?", alternativas: ["Inglês", "Espanhol", "Chinês Mandarim", "Hindi"], correta: 2 },
+        { questao: "Qual é o nome da linha imaginária que divide a Terra em Hemisfério Norte e Sul?", alternativas: ["Trópico de Capricórnio", "Meridiano de Greenwich", "Linha do Equador", "Círculo Polar Ártico"], correta: 2 },
+        { questao: "Quem escreveu a peça 'Romeu e Julieta'?", alternativas: ["William Shakespeare", "Machado de Assis", "Oscar Wilde", "Dante Alighieri"], correta: 0 },
+        { questao: "Qual destes países é o berço da invenção do avião, segundo a história brasileira?", alternativas: ["Estados Unidos", "França", "Brasil", "Inglaterra"], correta: 2 }
+    ],
+
+    "GERAL_8": [
+        { questao: "Qual é o monumento famoso de Paris que foi construído para a Exposição Universal de 1889?", alternativas: ["Arco do Triunfo", "Catedral de Notre-Dame", "Torre Eiffel", "Museu do Louvre"], correta: 2 },
+        { questao: "Qual é o ingrediente principal da culinária japonesa usado para fazer o Sushi?", alternativas: ["Trigo", "Arroz", "Milho", "Cevada"], correta: 1 },
+        { questao: "Em qual país surgiu a tradição de decorar árvores de Natal?", alternativas: ["Brasil", "Alemanha", "Estados Unidos", "França"], correta: 1 },
+        { questao: "Qual é a principal matéria-prima usada na fabricação do vidro?", alternativas: ["Argila", "Areia", "Petróleo", "Madeira"], correta: 1 },
+        { questao: "Qual é o nome do explorador que liderou a primeira expedição a dar a volta ao mundo?", alternativas: ["Cristóvão Colombo", "Vasco da Gama", "Fernão de Magalhães", "Marco Polo"], correta: 2 }
+    ],
+
+    "GERAL_9": [
+        { questao: "Qual fruta é conhecida por ser o símbolo da cidade de Nova York (The Big Apple)?", alternativas: ["Pêra", "Laranja", "Maçã", "Cereja"], correta: 2 },
+        { questao: "Qual é o nome da técnica japonesa de dobrar papel para criar figuras?", alternativas: ["Ikebana", "Sudoku", "Origami", "Bonsai"], correta: 2 },
+        { questao: "Qual destes órgãos do corpo humano é responsável por filtrar o sangue e produzir urina?", alternativas: ["Fígado", "Pâncreas", "Rins", "Pulmões"], correta: 2 },
+        { questao: "Quem foi o líder sul-africano que lutou contra o Apartheid e recebeu o Nobel da Paz?", alternativas: ["Martin Luther King", "Nelson Mandela", "Desmond Tutu", "Kofi Annan"], correta: 1 },
+        { questao: "Quantos anos tem um século?", alternativas: ["10 anos", "50 anos", "100 anos", "1000 anos"], correta: 2 }
+    ],
+
+    "GERAL_10": [
+        { questao: "Qual é o nome da embarcação famosa que afundou em sua viagem inaugural em 1912?", alternativas: ["Britannic", "Olympic", "Titanic", "Lusitania"], correta: 2 },
+        { questao: "Qual é a cor da caixa-preta de um avião (usada para gravar dados de voo)?", alternativas: ["Preta", "Laranja", "Vermelha", "Branca"], correta: 1 },
+        { questao: "Em qual continente se localiza o Grand Canyon?", alternativas: ["Ásia", "América do Norte", "África", "Europa"], correta: 1 },
+        { questao: "Qual é a substância mais dura encontrada na natureza?", alternativas: ["Ouro", "Ferro", "Diamante", "Grafite"], correta: 2 },
+        { questao: "Qual o nome do satélite natural da Terra?", alternativas: ["Sol", "Lua", "Marte", "Estrela Dalva"], correta: 1 }
+    ],
+
     "ESPORTE_1": [
         { questao: "No meio futebolístico, quem passa a torcer para o time adversário é conhecido como vira o quê?", alternativas: ["Vira-lata", "Vira-carta", "Vira-casaca", "Vira-folha"], correta: 2 },
         { questao: "No basquete, qual o lance é executado após uma falta e vale apenas 1 ponto?", alternativas: ["Arremesso", "Lance Livre", "Bandeja", "Enterrada"], correta: 1 },
@@ -200,11 +281,27 @@ const bancoDePerguntas = {
     ],
 
     "ESPORTE_2": [
-            { questao: "No vôlei, qual é o nome do jogador especialista em defesa que usa uma camisa de cor diferente?", alternativas: ["Levantador", "Líbero", "Defensor", "Central"], correta: 1 },
-            { questao: "Qual é o nome do esporte que utiliza uma peteca e uma raquete?", alternativas: ["Tênis de Mesa", "Badminton", "Squash", "Padel"], correta: 1 },
-            { questao: "Quantos tempos (quarters) tem uma partida de futebol americano (NFL)?", alternativas: ["2", "3", "4", "5"], correta: 2 },
-            { questao: "No boxe masculino, em qual categoria ficam os lutadores com peso entre 52-53kg?", alternativas: ["Peso Galo", "Peso Mosca", "Peso Pena", "Peso Leve"], correta: 0 },
-            { questao: "Qual tecnica é usada no tênis para separar os pés e ter melhor tempo de reação?", alternativas: ["Uso do tronco", "Smash", "Split Step", "Saque"], correta: 2 }
+        { questao: "No vôlei, qual é o nome do jogador especialista em defesa que usa uma camisa de cor diferente?", alternativas: ["Levantador", "Líbero", "Defensor", "Central"], correta: 1 },
+        { questao: "Qual é o nome do esporte que utiliza uma peteca e uma raquete?", alternativas: ["Tênis de Mesa", "Badminton", "Squash", "Padel"], correta: 1 },
+        { questao: "Quantos tempos (quarters) tem uma partida de futebol americano (NFL)?", alternativas: ["2", "3", "4", "5"], correta: 2 },
+        { questao: "No boxe masculino, em qual categoria ficam os lutadores com peso entre 52-53kg?", alternativas: ["Peso Galo", "Peso Mosca", "Peso Pena", "Peso Leve"], correta: 0 },
+        { questao: "Qual tecnica é usada no tênis para separar os pés e ter melhor tempo de reação?", alternativas: ["Uso do tronco", "Smash", "Split Step", "Saque"], correta: 2 }
     ],
+
+    "MUSICA_1": [
+        { questao: "Qual banda britânica lançou o icônico álbum 'The Dark Side of the Moon'' em 1973?", alternativas: ["The Beatles", "The Rolling Stones", "Pink Floyd", "Led Zeppelin"], correta: 2 },
+        { questao: " Quem é conhecida como a 'Rainha do Pop'?", alternativas: ["Whitney Houston", "Madonna", "Beyoncé", "Lady Gaga"], correta: 1 },
+        { questao: "Qual destes instrumentos NÃO é da família dos metais?", alternativas: ["Trompete", "Trombone", "Tuba", "Violino"], correta: 3 },
+        { questao: "Quem compôs a famosa 'Quinta Sinfonia'?", alternativas: ["Mozart", "Bach", "Beethoven", "Vivaldi"], correta: 2 },
+        { questao: "Qual cantor é conhecido como o 'Rei do Pop'?", alternativas: ["Elvis Presley", "Prince", "Michael Jackson", "Stevie Wonder"], correta: 2 }
+    ],
+
+    "MUSICA_2": [
+        { questao: "Qual cantor é conhecido mundialmente como o 'Rei do Reggae'?", alternativas: ["Mick Jagger", "Bob Marley", "Jimmy Cliff", "Peter Tosh"], correta: 1 },
+        { questao: "Qual banda de rock é famosa pela música 'Bohemian Rhapsody'?", alternativas: ["The Who", "Led Zeppelin", "Queen", "AC/DC"], correta: 2 },
+        { questao: "Quantas cordas tem um violino padrão?", alternativas: ["3", "4", "5", "6"], correta: 1 },
+        { questao: "Qual cantora detém o recorde de maior número de prêmios Grammy na história?", alternativas: ["Taylor Swift", "Adele", "Beyoncé", "Lady Gaga"], correta: 2 },
+        { questao: "Qual destes artistas é famoso por usar uma maquiagem de raio no rosto na capa do álbum 'Aladdin Sane'?", alternativas: ["David Bowie", "Freddie Mercury", "Elton John", "Prince"], correta: 0 }
+    ]
 
 };
