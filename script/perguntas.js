@@ -156,6 +156,45 @@ const bancoDePerguntas = {
         { questao: "No Mario Kart, qual item persegue automaticamente o primeiro colocado?", alternativas: ["Casco Verde", "Banana", "Casco Azul", "Estrela"], correta: 2 }
 
     ],
+        "GAMES_3": [
+        { questao: "Qual é o nome da cidade fictícia onde se passa a maior parte do jogo 'GTA V'?", alternativas: ["Liberty City", "Vice City", "Los Santos", "San Fierro"], correta: 2 },
+        { questao: "Em 'The Last of Us', qual o nome da jovem que Joel deve escoltar?", alternativas: ["Tess", "Abby", "Sarah", "Ellie"], correta: 3 },
+        { questao: "Qual franquia de jogos apresenta a frase: 'Finish Him!'?", alternativas: ["Street Fighter", "Mortal Kombat", "Tekken", "Killer Instinct"], correta: 1 },
+        { questao: "No clássico 'Mortal Kombat', qual personagem possui o poder de gelo?", alternativas: ["Scorpion", "Sub-Zero", "Raiden", "Reptile"], correta: 1 },
+        { questao: "Qual é o objetivo principal do jogo 'Tetris'?", alternativas: ["Matar inimigos", "Empilhar blocos e completar linhas", "Explorar cavernas", "Vencer uma corrida"], correta: 1 }
+    ],
+
+    "GAMES_4": [
+        { questao: "Qual console de videogame é o mais vendido de todos os tempos?", alternativas: ["Wii", "PlayStation 2", "Xbox 360", "Nintendo Switch"], correta: 1 },
+        { questao: "Quem é o vilão principal da franquia Super Mario?", alternativas: ["Wario", "Bowser", "Waluigi", "Donkey Kong"], correta: 1 },
+        { questao: "Em 'Red Dead Redemption 2', qual o nome do protagonista controlado na maior parte da história?", alternativas: ["John Marston", "Dutch van der Linde", "Arthur Morgan", "Micah Bell"], correta: 2 },
+        { questao: "No jogo 'The Sims', qual é o nome da língua fictícia falada pelos personagens?", alternativas: ["Simlish", "Simian", "Simtalk", "Simianese"], correta: 0 },
+        { questao: "Qual empresa criou o jogo 'Sonic the Hedgehog'?", alternativas: ["Nintendo", "Sony", "Sega", "Capcom"], correta: 2 }
+    ],
+
+    "GAMES_5": [
+        { questao: "Qual o nome da protagonista da série de jogos 'Tomb Raider'?", alternativas: ["Lara Croft", "Jill Valentine", "Samus Aran", "Bayonetta"], correta: 0 },
+        { questao: "No 'Minecraft', qual criatura explode quando chega perto do jogador?", alternativas: ["Zumbi", "Enderman", "Creeper", "Esqueleto"], correta: 2 },
+        { questao: "Qual é a principal ferramenta de 'Steve' no jogo Minecraft?", alternativas: ["Pá", "Machado", "Picareta", "Enxada"], correta: 2 },
+        { questao: "Em qual ano foi lançado o primeiro console PlayStation?", alternativas: ["1990", "1994", "1998", "2000"], correta: 1 },
+        { questao: "Qual jogo é conhecido pelo seu altíssimo nível de dificuldade e a frase 'You Died'?", alternativas: ["Dark Souls", "Skyrim", "The Witcher 3", "Elden Ring"], correta: 0 }
+    ],
+
+    "GAMES_6": [
+        { questao: "Qual o nome da princesa que o Mario sempre tenta resgatar?", alternativas: ["Daisy", "Zelda", "Rosalina", "Peach"], correta: 3 },
+        { questao: "Qual o nome do serviço de assinatura de jogos da Microsoft?", alternativas: ["PS Plus", "Game Pass", "Nintendo Online", "EA Play"], correta: 1 },
+        { questao: "No jogo 'Counter-Strike', qual o objetivo dos terroristas?", alternativas: ["Resgatar reféns", "Plantar a bomba", "Correr no circuito", "Capturar a bandeira"], correta: 1 },
+        { questao: "Qual é o nome da desenvolvedora de 'The Witcher' e 'Cyberpunk 2077'?", alternativas: ["Ubisoft", "Rockstar Games", "CD Projekt Red", "Bethesda"], correta: 2 },
+        { questao: "Qual o nome do modo de jogo em Minecraft onde você fica imortal e não toma dano?", alternativas: ["Hardcore", "Sobrevivência", "Criativo", "Aventura"], correta: 2 }
+    ],
+
+    "GAMES_7": [
+        { questao: "Qual é o nome do caçador de tesouros da franquia 'Uncharted'?", alternativas: ["Nathan Drake", "Joel Miller", "Arthur Morgan", "John Marston"], correta: 0 },
+        { questao: "Qual é a principal cor do personagem Mega Man?", alternativas: ["Vermelho", "Verde", "Amarelo", "Azul"], correta: 3 },
+        { questao: "Em qual console foi lançado originalmente o jogo 'GoldenEye 007'?", alternativas: ["Super Nintendo", "PlayStation 1", "Nintendo 64", "Sega Saturn"], correta: 2 },
+        { questao: "No jogo 'Among Us', qual o objetivo do Impostor?", alternativas: ["Fazer tarefas", "Consertar a nave", "Eliminar a tripulação", "Votar nos amigos"], correta: 2 },
+        { questao: "Qual o nome do dragão roxo mascote da PlayStation?", alternativas: ["Crash", "Spyro", "Sonic", "Rayman"], correta: 1 }
+    ],
 
     // --- Geografia ---
     "GEOGRAFIA_1": [
@@ -272,6 +311,46 @@ const bancoDePerguntas = {
         { questao: "Qual o nome do satélite natural da Terra?", alternativas: ["Sol", "Lua", "Marte", "Estrela Dalva"], correta: 1 }
     ],
 
+    "GERAL_11": [
+        { questao: "Qual é a capital da Argentina?", alternativas: ["Santiago", "Montevidéu", "Buenos Aires", "Assunção"], correta: 2 },
+        { questao: "Quem foi o primeiro presidente do Brasil?", alternativas: ["Getúlio Vargas", "Deodoro da Fonseca", "Dom Pedro II", "Juscelino Kubitschek"], correta: 1 },
+        { questao: "Qual é o país conhecido como a 'Terra do Sol Nascente'?", alternativas: ["China", "Japão", "Coreia do Sul", "Tailândia"], correta: 1 },
+        { questao: "Qual é o animal que simboliza o símbolo da paz?", alternativas: ["Águia", "Pomba", "Leão", "Beija-flor"], correta: 1 },
+        { questao: "Em qual país fica a Torre de Pisa?", alternativas: ["França", "Itália", "Espanha", "Grécia"], correta: 1 }
+    ],
+
+    "GERAL_12": [
+        { questao: "Qual o maior país da América do Sul?", alternativas: ["Argentina", "Chile", "Brasil", "Colômbia"], correta: 2 },
+        { questao: "Qual é a principal língua falada na Austrália?", alternativas: ["Espanhol", "Francês", "Inglês", "Alemão"], correta: 2 },
+        { questao: "Qual navegador descobriu o Brasil em 1500?", alternativas: ["Cristóvão Colombo", "Vasco da Gama", "Pedro Álvares Cabral", "Américo Vespúcio"], correta: 2 },
+        { questao: "Qual o nome da maior floresta tropical do mundo?", alternativas: ["Mata Atlântica", "Floresta Amazônica", "Taiga", "Savana"], correta: 1 },
+        { questao: "Como é chamado o estilo de música pop originário da Coreia do Sul?", alternativas: ["C-Pop", "J-Pop", "K-Pop", "Z-Pop"], correta: 2 },    
+    ],
+
+    "GERAL_13": [
+        { questao: "Qual é a principal matéria-prima do papel?", alternativas: ["Petróleo", "Madeira", "Areia", "Plástico"], correta: 1 },
+        { questao: "Em qual continente fica o Egito?", alternativas: ["Ásia", "África", "Europa", "América"], correta: 1 },
+        { questao: "Quantas cores tem o arco-íris?", alternativas: ["5", "6", "7", "8"], correta: 2 },
+        { questao: "Qual é o maior animal do mundo?", alternativas: ["Elefante", "Baleia Azul", "Tubarão-Baleia", "Girafa"], correta: 1 },
+        { questao: "Quem pintou a Capela Sistina?", alternativas: ["Leonardo da Vinci", "Donatello", "Michelangelo", "Rafael"], correta: 2 }
+    ],
+
+    "GERAL_14": [
+        { questao: "Qual é o principal gás que compõe a nossa atmosfera?", alternativas: ["Oxigênio", "Nitrogênio", "Gás Carbônico", "Hélio"], correta: 1 },
+        { questao: "Qual é o nome da premiação máxima do cinema mundial?", alternativas: ["Grammy", "Oscar", "Emmy", "Tony"], correta: 1 },        
+        { questao: "Em qual oceano fica a Ilha de Páscoa?", alternativas: ["Atlântico", "Pacífico", "Índico", "Glacial Ártico"], correta: 1 },
+        { questao: "Quantas pernas tem uma aranha?", alternativas: ["6", "8", "10", "12"], correta: 1 },
+        { questao: "Qual é o processo pelo qual as lagartas se transformam em borboletas?", alternativas: ["Fotossíntese", "Metamorfose", "Fusão", "Digestão"], correta: 1 },
+    ],
+
+    "GERAL_15": [
+        { questao: "Como é chamado o prato típico brasileiro feito à base de feijão preto e carnes de porco?", alternativas: ["Vatapá", "Feijoada", "Acarajé", "Pamonha"], correta: 1 },
+        { questao: "Qual é a moeda usada nos Estados Unidos?", alternativas: ["Euro", "Real", "Libra", "Dólar"], correta: 3 },
+        { questao: "Quantos anos vive, em média, uma tartaruga gigante?", alternativas: ["20 anos", "50 anos", "Mais de 100 anos", "10 anos"], correta: 2 },
+        { questao: "Qual é a capital da Alemanha?", alternativas: ["Munique", "Berlim", "Hamburgo", "Frankfurt"], correta: 1 },
+        { questao: "Qual destas redes sociais é famosa pelos vídeos curtos e pelas 'dancinhas'?", alternativas: ["Facebook", "LinkedIn", "TikTok", "Pinterest"], correta: 2 },
+    ],
+
     "ESPORTE_1": [
         { questao: "No meio futebolístico, quem passa a torcer para o time adversário é conhecido como vira o quê?", alternativas: ["Vira-lata", "Vira-carta", "Vira-casaca", "Vira-folha"], correta: 2 },
         { questao: "No basquete, qual o lance é executado após uma falta e vale apenas 1 ponto?", alternativas: ["Arremesso", "Lance Livre", "Bandeja", "Enterrada"], correta: 1 },
@@ -304,4 +383,18 @@ const bancoDePerguntas = {
         { questao: "Qual destes artistas é famoso por usar uma maquiagem de raio no rosto na capa do álbum 'Aladdin Sane'?", alternativas: ["David Bowie", "Freddie Mercury", "Elton John", "Prince"], correta: 0 }
     ]
 
+};
+
+const novosConjuntos = {
+    // --- Games (Continuação) ---
+
+
+    // --- Conhecimentos Gerais (Continuação) ---
+
+
+    "GERAL_16": [
+        { questao: "Quem inventou o telefone?", alternativas: ["Thomas Edison", "Alexander Graham Bell", "Santos Dumont", "Albert Einstein"], correta: 1 },
+        { questao: "Qual é a capital da Espanha?", alternativas: ["Barcelona", "Sevilha", "Madri", "Valência"], correta: 2 },
+        { questao: "Qual é o esporte mais popular no Brasil?", alternativas: ["Vôlei", "Futebol", "Basquete", "Tênis"], correta: 1 },
+    ]
 };
