@@ -48,6 +48,7 @@ const dom = {
     respondingNow: document.getElementById("responding-now"),
     nameInput1: document.getElementById("name-p1"),
     nameInput2: document.getElementById("name-p2"),
+    buttonSound: document.getElementById("sound-button"),
     correctOverlay: document.getElementById("correct-overlay"),
     wrongOverlay: document.getElementById("wrong-overlay"),
 };
@@ -82,9 +83,20 @@ window.addEventListener("keydown", (e) => {
     }
 
     if (!jogoIniciado || alguemBateu) return; 
+
     const tecla = e.key.toUpperCase();
-    if (tecla === "A") ativarBuzzer(1);
-    if (tecla === "L") ativarBuzzer(2);
+    if (tecla === "A" || tecla === "L") {
+        // Toca o som aqui ANTES de qualquer outra lógica
+        const somBotao = document.getElementById("sound-button");
+        if (somBotao) {
+            somBotao.currentTime = 0;
+            somBotao.volume = 0.8;
+            somBotao.play().catch(err => console.log("Erro de áudio:", err));
+        }
+
+        if (tecla === "A") ativarBuzzer(1);
+        if (tecla === "L") ativarBuzzer(2);
+    }
 });
 
 /**
@@ -325,6 +337,20 @@ function tratarTempoEsgotado() {
  * 7. SISTEMA DO BUZZER E APRESENTADOR
  */
 function ativarBuzzer(numJogador) {
+    const somBotao = document.getElementById("sound-button");
+    if (somBotao) {
+        somBotao.currentTime = 0;
+        somBotao.volume = 1;
+        somBotao.play().catch(e => console.log("Erro som:", e));
+    }
+
+    if (musicaBG) {
+        musicaBG.volume = 0.1;
+        setTimeout(() => {
+            if (musicaBG) musicaBG.volume = 0.4;
+        }, 2000);
+    }
+
     alguemBateu = true;
     jogadorAtivo = numJogador;
     
@@ -335,7 +361,7 @@ function ativarBuzzer(numJogador) {
         perguntaInterrompida = true; 
         clearInterval(intervaloDigitacao);
         clearTimeout(timeoutAlternativas);
-        dom.questionTitle.textContent = textoCompleto;
+        dom.questionTitle.textContent = textoCompleto; 
         exibirBotoesApresentador(); 
     } else {
         perguntaInterrompida = false;
